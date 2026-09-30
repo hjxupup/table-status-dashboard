@@ -1,5 +1,9 @@
 # Table Status Dashboard
 
+**[Live Demo — Open the Dashboard](https://table-status-dashboard-jiaxin.hjxupup.chatgpt.site/)**
+
+The hosted demo is public and requires no sign-in, installation, or deployment.
+
 A reproduction of the original Python / Flask / SQLAlchemy table-metadata dashboard. It retains the original card grid, Chinese field labels, green cache buttons, blue analysis buttons, time-column dropdowns, and star favorites.
 
 This GitHub-ready bundle preserves the dashboard's visible historical metrics, table headings, time-column labels and timestamps. It includes the Flask backend, a prebuilt `docs/` website, and a self-contained `Table_Status_Dashboard.html` preview.
@@ -92,7 +96,9 @@ docker run --rm -p 8000:8000 table-status-dashboard
 
 This Dockerfile runs snapshot mode with Gunicorn. The standalone Python command above uses Flask's local development server. A live-mode container additionally requires Java and JDBC dependencies and driver files.
 
-## Export for GitHub Pages or static hosting
+## Optional: export for GitHub Pages or static hosting
+
+The live demo above is already deployed. These steps are only needed to host your own copy.
 
 ```bash
 python tools/build_demo.py

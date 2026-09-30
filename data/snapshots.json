@@ -1,0 +1,2848 @@
+{
+  "mode": "snapshot",
+  "description": "Historical display metrics; internal connection settings and non-display metadata are excluded.",
+  "captured_at": "2026-07-03 11:49:09",
+  "table_count": 39,
+  "snapshots": [
+    {
+      "table_name": "P_CBT_BMO_T.USER_ISSUE_HISTORY",
+      "analysis_time": "2026-07-03 11:46:50",
+      "create_time": "Thu Jul 02 18:05:13 GMT-07:00 2026",
+      "row_count": 2613397151,
+      "pk_distinct_count": 2613397151,
+      "column_count": 14,
+      "physical_size_bytes": 87573140892,
+      "date_columns": [
+        "UPDATE_DT",
+        "src_cre_dt",
+        "src_cre_date",
+        "src_last_modfd_date",
+        "issue_exprtn_ts",
+        "cre_date",
+        "upd_date"
+      ],
+      "date_ranges": {
+        "UPDATE_DT": {
+          "min_date": "2026-07-02",
+          "max_date": "2026-07-02"
+        },
+        "src_cre_dt": {
+          "min_date": "2004-04-15",
+          "max_date": "2026-07-01"
+        },
+        "src_cre_date": {
+          "min_date": "2004-04-15 14:48:13",
+          "max_date": "2026-07-01 23:59:59"
+        },
+        "src_last_modfd_date": {
+          "min_date": "2004-04-21 19:51:31",
+          "max_date": "2026-07-02 05:00:15"
+        },
+        "issue_exprtn_ts": {
+          "min_date": "2005-05-21 16:04:56",
+          "max_date": "2053-07-24 10:26:48"
+        },
+        "cre_date": {
+          "min_date": "2005-01-12",
+          "max_date": "2026-07-02"
+        },
+        "upd_date": {
+          "min_date": "2005-01-14 00:00:00",
+          "max_date": "2026-07-02 05:10:47.545780"
+        }
+      }
+    },
+    {
+      "table_name": "P_CBT_BMO_T.USER_STATE_HISTORY",
+      "analysis_time": "2026-07-03 11:49:09",
+      "create_time": "Thu Jul 02 18:05:53 GMT-07:00 2026",
+      "row_count": 5683299731,
+      "pk_distinct_count": 5683299731,
+      "column_count": 13,
+      "physical_size_bytes": 93533889261,
+      "date_columns": [
+        "UPDATE_DT",
+        "change_time",
+        "cre_date",
+        "upd_date"
+      ],
+      "date_ranges": {
+        "UPDATE_DT": {
+          "min_date": "2026-07-02",
+          "max_date": "2026-07-02"
+        },
+        "change_time": {
+          "min_date": "2000-01-10 16:17:22",
+          "max_date": "2026-07-01 23:59:49"
+        },
+        "cre_date": {
+          "min_date": "2003-07-17",
+          "max_date": "2026-07-02"
+        },
+        "upd_date": {
+          "min_date": "2003-07-17",
+          "max_date": "2026-07-02"
+        }
+      }
+    },
+    {
+      "table_name": "P_KYRENELIU_T.TRANS_BASE",
+      "analysis_time": "2026-07-03 10:52:22",
+      "create_time": "Thu Jul 02 12:10:01 GMT-07:00 2026",
+      "row_count": 2024064208,
+      "pk_distinct_count": 2024064208,
+      "column_count": 311,
+      "physical_size_bytes": 920651477519,
+      "date_columns": [
+        "UPDATE_DT",
+        "TRANS_DT",
+        "QTR_END_DT",
+        "MONTH_END_DT",
+        "RTL_WEEK_BEG_DT",
+        "RTL_WEEK_END_DT",
+        "AUCT_START_DT",
+        "AUCT_END_DT",
+        "CREATED_DT",
+        "CREATED_TIME",
+        "CK_COMPLETE_DATE",
+        "CK_COMPLETE_DT",
+        "PAID_DATE",
+        "PAID_DT",
+        "PYMNT_TS",
+        "TRKNG_UPLD_TS",
+        "HNDL_BY_TS",
+        "ACPTNC_SCAN_TS",
+        "EDD_TS",
+        "EXTND_EDD_TS",
+        "CDE_MAX_DT",
+        "CDE_MAX_TM",
+        "CDE_MIN_DT",
+        "CDE_MIN_TM",
+        "DLVRD_TS",
+        "RCNT_CPS_CLAIM_OPEN_DT",
+        "RCNT_CPS_CLAIM_OPEN_DATE",
+        "CPS_CLAIM_CLOSE_DT",
+        "CPS_CLAIM_CLOSE_DATE",
+        "RTRN_OPEN_DT",
+        "CHARGEBACK_CLSD_TS",
+        "CNCL_RQST_DT",
+        "CNCL_RQST_TM",
+        "SIR_CRE_DT",
+        "SIR_CRE_TM",
+        "STOCKOUT_DT",
+        "BMO_STOCKOUT_DT",
+        "BMO_STOCKOUT_DT_V2",
+        "FDBK_RCVD_DT",
+        "HAS_DTL_RTG_YN_ID",
+        "IS_HIDDEN_DATE",
+        "ITEM_CNDTN_ID",
+        "ATHNTCTN_DATE",
+        "BUYER_USER_SRVY_SEND_DT",
+        "BUYER_USER_SRVY_CMPLTD_DT",
+        "Q4_Shipping_Time_Met_My_Needs",
+        "GMV_DT",
+        "DEFECT_DT"
+      ],
+      "date_ranges": {
+        "UPDATE_DT": {
+          "min_date": "2026-07-01",
+          "max_date": "2026-07-01"
+        },
+        "TRANS_DT": {
+          "min_date": "2025-01-01",
+          "max_date": "2026-07-01"
+        },
+        "QTR_END_DT": {
+          "min_date": "2025-03-31",
+          "max_date": "2026-09-30"
+        },
+        "MONTH_END_DT": {
+          "min_date": "2025-01-31",
+          "max_date": "2026-07-31"
+        },
+        "RTL_WEEK_BEG_DT": {
+          "min_date": "2024-12-29",
+          "max_date": "2026-06-28"
+        },
+        "RTL_WEEK_END_DT": {
+          "min_date": "2025-01-04",
+          "max_date": "2026-07-04"
+        },
+        "AUCT_START_DT": {
+          "min_date": "2003-05-21",
+          "max_date": "2026-07-01"
+        },
+        "AUCT_END_DT": {
+          "min_date": "2024-06-30",
+          "max_date": "2026-08-01"
+        },
+        "CREATED_DT": {
+          "min_date": "2024-10-04",
+          "max_date": "2026-07-01"
+        },
+        "CREATED_TIME": {
+          "min_date": "2024-10-04 05:52:28",
+          "max_date": "2026-07-01 00:21:27"
+        },
+        "CK_COMPLETE_DATE": {
+          "min_date": "1969-12-31 00:00:00",
+          "max_date": "2026-07-01 00:21:38"
+        },
+        "CK_COMPLETE_DT": {
+          "min_date": "1969-12-31",
+          "max_date": "2026-07-01"
+        },
+        "PAID_DATE": {
+          "min_date": "1969-12-31 00:00:00",
+          "max_date": "2026-07-01 00:21:37"
+        },
+        "PAID_DT": {
+          "min_date": "1969-12-31",
+          "max_date": "2026-07-01"
+        },
+        "PYMNT_TS": {
+          "min_date": "1969-12-31 00:00:00",
+          "max_date": "2026-06-30 00:22:07"
+        },
+        "TRKNG_UPLD_TS": {
+          "min_date": "2024-11-03 08:37:46",
+          "max_date": "2026-06-29 23:59:59"
+        },
+        "HNDL_BY_TS": {
+          "min_date": "2025-01-02 11:59:59",
+          "max_date": "2027-04-13 11:59:59"
+        },
+        "ACPTNC_SCAN_TS": {
+          "min_date": "2024-08-01 11:48:20",
+          "max_date": "2026-07-01 06:53:00"
+        },
+        "EDD_TS": {
+          "min_date": "2025-01-02 15:59:59",
+          "max_date": "2027-04-22 23:59:59"
+        },
+        "EXTND_EDD_TS": {
+          "min_date": "2024-12-08 00:59:59",
+          "max_date": "2026-11-05 00:59:59"
+        },
+        "CDE_MAX_DT": {
+          "min_date": "2024-12-06",
+          "max_date": "2027-04-21"
+        },
+        "CDE_MAX_TM": {
+          "min_date": "2024-12-06 16:00:00",
+          "max_date": "2027-04-21 10:00:00"
+        },
+        "CDE_MIN_DT": {
+          "min_date": "2024-12-04",
+          "max_date": "2027-04-14"
+        },
+        "CDE_MIN_TM": {
+          "min_date": "2024-12-04 16:00:00",
+          "max_date": "2027-04-14 00:00:00"
+        },
+        "DLVRD_TS": {
+          "min_date": "2024-08-02 11:22:32",
+          "max_date": "2026-07-01 05:44:00"
+        },
+        "RCNT_CPS_CLAIM_OPEN_DT": {
+          "min_date": "2025-01-01",
+          "max_date": "2026-06-30"
+        },
+        "RCNT_CPS_CLAIM_OPEN_DATE": {
+          "min_date": "2025-01-01 01:08:07",
+          "max_date": "2026-06-30 06:04:55"
+        },
+        "CPS_CLAIM_CLOSE_DT": {
+          "min_date": "2025-01-01",
+          "max_date": "2026-06-30"
+        },
+        "CPS_CLAIM_CLOSE_DATE": {
+          "min_date": "1900-01-01 00:00:00",
+          "max_date": "2026-06-30 06:05:00"
+        },
+        "RTRN_OPEN_DT": {
+          "min_date": "2025-01-01",
+          "max_date": "2026-06-29"
+        },
+        "CHARGEBACK_CLSD_TS": {
+          "min_date": "2025-01-01 10:17:27",
+          "max_date": "2026-06-30 05:45:19"
+        },
+        "CNCL_RQST_DT": {
+          "min_date": "2024-10-08",
+          "max_date": "2026-07-01"
+        },
+        "CNCL_RQST_TM": {
+          "min_date": "2024-10-08 18:46:45",
+          "max_date": "2026-07-01 06:01:20"
+        },
+        "SIR_CRE_DT": {
+          "min_date": "2025-01-01",
+          "max_date": "2026-06-29"
+        },
+        "SIR_CRE_TM": {
+          "min_date": "2025-01-01 00:04:59",
+          "max_date": "2026-06-29 23:59:58"
+        },
+        "STOCKOUT_DT": {
+          "min_date": "2025-01-01",
+          "max_date": "2026-06-30"
+        },
+        "BMO_STOCKOUT_DT": {
+          "min_date": "2025-01-01",
+          "max_date": "2026-06-30"
+        },
+        "BMO_STOCKOUT_DT_V2": {
+          "min_date": "2025-01-01",
+          "max_date": "2026-06-30"
+        },
+        "FDBK_RCVD_DT": {
+          "min_date": "2024-10-16",
+          "max_date": "2026-06-30"
+        },
+        "HAS_DTL_RTG_YN_ID": {
+          "min_date": "N/A",
+          "max_date": "1"
+        },
+        "IS_HIDDEN_DATE": {
+          "min_date": "2024-11-01 05:52:00",
+          "max_date": "2026-06-30 23:59:59"
+        },
+        "ITEM_CNDTN_ID": {
+          "min_date": "1000",
+          "max_date": "7000"
+        },
+        "ATHNTCTN_DATE": {
+          "min_date": "2021-11-05",
+          "max_date": "2026-06-30"
+        },
+        "BUYER_USER_SRVY_SEND_DT": {
+          "min_date": "2025-01-04",
+          "max_date": "2026-06-30"
+        },
+        "BUYER_USER_SRVY_CMPLTD_DT": {
+          "min_date": "2025-01-04",
+          "max_date": "2026-06-30"
+        },
+        "Q4_Shipping_Time_Met_My_Needs": {
+          "min_date": "Excellent",
+          "max_date": "Very good"
+        },
+        "GMV_DT": {
+          "min_date": "2025-01-01",
+          "max_date": "2026-06-30"
+        },
+        "DEFECT_DT": {
+          "min_date": "2024-11-06",
+          "max_date": "2026-06-30"
+        }
+      }
+    },
+    {
+      "table_name": "P_CBT_BMO_T.Shipping_Trans_Base",
+      "analysis_time": "2026-07-03 10:56:08",
+      "create_time": "Thu Jul 02 11:37:41 GMT-07:00 2026",
+      "row_count": 3421477466,
+      "pk_distinct_count": 3421477466,
+      "column_count": 401,
+      "physical_size_bytes": 1398125983051,
+      "date_columns": [
+        "Create_Date",
+        "TRANS_DT",
+        "CNCL_START_DT",
+        "FIRST_CPS_CLAIM_OPEN_DATE",
+        "FIRST_CPS_CLAIM_OPEN_DT",
+        "RCNT_CPS_CLAIM_OPEN_DATE",
+        "RCNT_CPS_CLAIM_OPEN_DT",
+        "PYMNT_TS",
+        "CHECKOUT_DT",
+        "TRKNG_UPLD_TS",
+        "ACPTNC_SCAN_TS",
+        "DLVRD_TS",
+        "HNDL_BY_TS",
+        "EDD_TS",
+        "EXTND_EDD_TS",
+        "FRST_TRKING_DTL_ID",
+        "RCNT_TRKING_DTL_ID",
+        "FRST_TRKING_ULD_DT",
+        "TRKING_DLVRD_DT",
+        "TRKING_DLVRD_TM",
+        "CDE_MAX_DT",
+        "CDE_MAX_TM",
+        "CDE_MIN_LCL_DT",
+        "CDE_MAX_LCL_DT",
+        "CK_FIRST_PYMT_DT",
+        "FIRST_PYMT_LCL_DT",
+        "ONTIME_DLVRY_FLAG",
+        "ONTIME_HNDLD_FLAG",
+        "DLVRY_DT",
+        "GMV_DT",
+        "TRANS_DT_YEAR",
+        "TRANS_DT_MONTH",
+        "TRANS_DT_YEAR_MONTH",
+        "END_DATE",
+        "TRANS_MONTH",
+        "DYN_EDD_END_DATE",
+        "DYN_EDD_MONTH",
+        "PROM_EDD_END_DATE",
+        "PROM_EDD_MONTH",
+        "GMV_DT_END_DATE",
+        "GMV_DT_MONTH",
+        "I826_Open_Date",
+        "I833_Open_Date",
+        "PKG_WIDTH_NUM",
+        "OUTBOUND_ODR_DATE",
+        "OUTBOUND_DATE",
+        "OC_FLFLMNT_ORDER_PLC_TM",
+        "OC_FLFLMNT_OUTBND_TM",
+        "OC_PACKAGE_WIDTH",
+        "OC_SINGLE_SKU_WIDTH",
+        "Ascan_5BSNS_DT_IND",
+        "Ascan_6BSNS_DT_IND",
+        "Dscan_5BSNS_DT_IND",
+        "Dscan_6BSNS_DT_IND",
+        "Tracking_Dscan_5BSNS_DT_IND",
+        "Tracking_Dscan_6BSNS_DT_IND",
+        "HNDL_5BSNS_DT_IND",
+        "HNDL_6BSNS_DT_IND",
+        "EDD_5BSNS_DT_IND",
+        "EDD_6BSNS_DT_IND",
+        "CDE_LOCAL_5BSNS_DT_IND",
+        "CDE_LOCAL_6BSNS_DT_IND",
+        "PYMNT_5BSNS_DT_IND",
+        "PYMNT_6BSNS_DT_IND",
+        "WIN_OUTBOUND_5BSNS_DT_IND",
+        "WIN_OUTBOUND_6BSNS_DT_IND",
+        "CWH_ORDER_5BSNS_DT_IND",
+        "CWH_ORDER_6BSNS_DT_IND",
+        "CWH_OUTBOUND_5BSNS_DT_IND",
+        "CWH_OUTBOUND_6BSNS_DT_IND",
+        "Ascan_Ontime",
+        "Ascan_Ontime_V2",
+        "Dscan_Ontime",
+        "Dscan_Ontime_V2",
+        "CWH_Order_Ontime_Flag",
+        "LISTING_WIDTH"
+      ],
+      "date_ranges": {
+        "Create_Date": {
+          "min_date": "2026-07-01",
+          "max_date": "2026-07-01"
+        },
+        "TRANS_DT": {
+          "min_date": "2024-01-01",
+          "max_date": "2026-07-01"
+        },
+        "CNCL_START_DT": {
+          "min_date": "2024-01-01",
+          "max_date": "2026-06-30"
+        },
+        "FIRST_CPS_CLAIM_OPEN_DATE": {
+          "min_date": "2024-01-01 08:34:38",
+          "max_date": "2026-06-30 06:04:53"
+        },
+        "FIRST_CPS_CLAIM_OPEN_DT": {
+          "min_date": "2024-01-01",
+          "max_date": "2026-06-30"
+        },
+        "RCNT_CPS_CLAIM_OPEN_DATE": {
+          "min_date": "2024-01-01 08:34:38",
+          "max_date": "2026-06-30 06:04:55"
+        },
+        "RCNT_CPS_CLAIM_OPEN_DT": {
+          "min_date": "2024-01-01",
+          "max_date": "2026-06-30"
+        },
+        "PYMNT_TS": {
+          "min_date": "1969-12-31 00:00:00",
+          "max_date": "2026-06-30 00:21:50"
+        },
+        "CHECKOUT_DT": {
+          "min_date": "1969-12-31",
+          "max_date": "2026-06-30"
+        },
+        "TRKNG_UPLD_TS": {
+          "min_date": "2024-06-01 00:03:22",
+          "max_date": "2026-06-29 23:59:59"
+        },
+        "ACPTNC_SCAN_TS": {
+          "min_date": "2024-01-02 12:03:00",
+          "max_date": "2026-07-01 06:53:00"
+        },
+        "DLVRD_TS": {
+          "min_date": "2024-01-04 10:36:00",
+          "max_date": "2026-07-01 05:44:00"
+        },
+        "HNDL_BY_TS": {
+          "min_date": "2024-06-02 08:59:59",
+          "max_date": "2027-04-13 11:59:59"
+        },
+        "EDD_TS": {
+          "min_date": "2024-06-03 14:59:59",
+          "max_date": "2027-04-22 23:59:59"
+        },
+        "EXTND_EDD_TS": {
+          "min_date": "2024-05-30 10:32:02",
+          "max_date": "2026-11-05 00:59:59"
+        },
+        "FRST_TRKING_DTL_ID": {
+          "min_date": "2027633250012",
+          "max_date": "2502448489017"
+        },
+        "RCNT_TRKING_DTL_ID": {
+          "min_date": "2027633250012",
+          "max_date": "2502448500017"
+        },
+        "FRST_TRKING_ULD_DT": {
+          "min_date": "2023-08-01",
+          "max_date": "2026-06-29"
+        },
+        "TRKING_DLVRD_DT": {
+          "min_date": "2023-08-04",
+          "max_date": "2026-07-01"
+        },
+        "TRKING_DLVRD_TM": {
+          "min_date": "2023-08-04 10:56:00",
+          "max_date": "2026-07-01 05:24:16"
+        },
+        "CDE_MAX_DT": {
+          "min_date": "2024-01-02",
+          "max_date": "2027-04-21"
+        },
+        "CDE_MAX_TM": {
+          "min_date": "2024-01-02 06:00:00",
+          "max_date": "2027-04-21 10:00:00"
+        },
+        "CDE_MIN_LCL_DT": {
+          "min_date": "2024-01-01",
+          "max_date": "2027-04-14"
+        },
+        "CDE_MAX_LCL_DT": {
+          "min_date": "2024-01-02",
+          "max_date": "2027-04-22"
+        },
+        "CK_FIRST_PYMT_DT": {
+          "min_date": "2024-01-01",
+          "max_date": "2026-07-01"
+        },
+        "FIRST_PYMT_LCL_DT": {
+          "min_date": "2023-12-31",
+          "max_date": "2026-07-01"
+        },
+        "ONTIME_DLVRY_FLAG": {
+          "min_date": "N/A",
+          "max_date": "1"
+        },
+        "ONTIME_HNDLD_FLAG": {
+          "min_date": "N/A",
+          "max_date": "1"
+        },
+        "DLVRY_DT": {
+          "min_date": "2023-08-04",
+          "max_date": "2026-07-02"
+        },
+        "GMV_DT": {
+          "min_date": "2024-01-01",
+          "max_date": "2026-06-30"
+        },
+        "TRANS_DT_YEAR": {
+          "min_date": "2024",
+          "max_date": "2026"
+        },
+        "TRANS_DT_MONTH": {
+          "min_date": "1",
+          "max_date": "12"
+        },
+        "TRANS_DT_YEAR_MONTH": {
+          "min_date": "2024M01",
+          "max_date": "2026M07"
+        },
+        "END_DATE": {
+          "min_date": "2024-01-06",
+          "max_date": "2026-07-04"
+        },
+        "TRANS_MONTH": {
+          "min_date": "2024-01-01",
+          "max_date": "2026-07-01"
+        },
+        "DYN_EDD_END_DATE": {
+          "min_date": "2024-01-06",
+          "max_date": "2027-04-24"
+        },
+        "DYN_EDD_MONTH": {
+          "min_date": "2024-01-01",
+          "max_date": "2027-04-01"
+        },
+        "PROM_EDD_END_DATE": {
+          "min_date": "2024-06-08",
+          "max_date": "2027-04-24"
+        },
+        "PROM_EDD_MONTH": {
+          "min_date": "2024-06-01",
+          "max_date": "2027-04-01"
+        },
+        "GMV_DT_END_DATE": {
+          "min_date": "2024-01-06",
+          "max_date": "2026-07-04"
+        },
+        "GMV_DT_MONTH": {
+          "min_date": "2024-01-01",
+          "max_date": "2026-06-01"
+        },
+        "I826_Open_Date": {
+          "min_date": "2020-06-08",
+          "max_date": "2026-06-26"
+        },
+        "I833_Open_Date": {
+          "min_date": "2020-07-05",
+          "max_date": "2026-06-29"
+        },
+        "PKG_WIDTH_NUM": {
+          "min_date": "N/A",
+          "max_date": "1000.0"
+        },
+        "OUTBOUND_ODR_DATE": {
+          "min_date": "0171-09-11 15:42:00",
+          "max_date": "2192-09-08 12:06:00"
+        },
+        "OUTBOUND_DATE": {
+          "min_date": "0002-11-30 00:00:00",
+          "max_date": "2192-09-08 23:59:00"
+        },
+        "OC_FLFLMNT_ORDER_PLC_TM": {
+          "min_date": "2023-12-31 23:03:11",
+          "max_date": "2026-06-29 18:14:32"
+        },
+        "OC_FLFLMNT_OUTBND_TM": {
+          "min_date": "2024-01-01 13:25:09",
+          "max_date": "2026-06-30 12:23:57"
+        },
+        "OC_PACKAGE_WIDTH": {
+          "min_date": "N/A",
+          "max_date": "9200.0"
+        },
+        "OC_SINGLE_SKU_WIDTH": {
+          "min_date": "N/A",
+          "max_date": "142"
+        },
+        "Ascan_5BSNS_DT_IND": {
+          "min_date": "12759",
+          "max_date": "13521"
+        },
+        "Ascan_6BSNS_DT_IND": {
+          "min_date": "13314",
+          "max_date": "14225"
+        },
+        "Dscan_5BSNS_DT_IND": {
+          "min_date": "12762",
+          "max_date": "13521"
+        },
+        "Dscan_6BSNS_DT_IND": {
+          "min_date": "13318",
+          "max_date": "14225"
+        },
+        "Tracking_Dscan_5BSNS_DT_IND": {
+          "min_date": "12661",
+          "max_date": "13521"
+        },
+        "Tracking_Dscan_6BSNS_DT_IND": {
+          "min_date": "13204",
+          "max_date": "14225"
+        },
+        "HNDL_5BSNS_DT_IND": {
+          "min_date": "12783",
+          "max_date": "13604"
+        },
+        "HNDL_6BSNS_DT_IND": {
+          "min_date": "13321",
+          "max_date": "14341"
+        },
+        "EDD_5BSNS_DT_IND": {
+          "min_date": "12786",
+          "max_date": "13606"
+        },
+        "EDD_6BSNS_DT_IND": {
+          "min_date": "13325",
+          "max_date": "14343"
+        },
+        "CDE_LOCAL_5BSNS_DT_IND": {
+          "min_date": "12687",
+          "max_date": "13604"
+        },
+        "CDE_LOCAL_6BSNS_DT_IND": {
+          "min_date": "13206",
+          "max_date": "14341"
+        },
+        "PYMNT_5BSNS_DT_IND": {
+          "min_date": "12683",
+          "max_date": "13522"
+        },
+        "PYMNT_6BSNS_DT_IND": {
+          "min_date": "13201",
+          "max_date": "14226"
+        },
+        "WIN_OUTBOUND_5BSNS_DT_IND": {
+          "min_date": "12744",
+          "max_date": "13373"
+        },
+        "WIN_OUTBOUND_6BSNS_DT_IND": {
+          "min_date": "13302",
+          "max_date": "14064"
+        },
+        "CWH_ORDER_5BSNS_DT_IND": {
+          "min_date": "12742",
+          "max_date": "13416"
+        },
+        "CWH_ORDER_6BSNS_DT_IND": {
+          "min_date": "13293",
+          "max_date": "14112"
+        },
+        "CWH_OUTBOUND_5BSNS_DT_IND": {
+          "min_date": "12765",
+          "max_date": "13386"
+        },
+        "CWH_OUTBOUND_6BSNS_DT_IND": {
+          "min_date": "13334",
+          "max_date": "14081"
+        },
+        "Ascan_Ontime": {
+          "min_date": "N/A",
+          "max_date": "1"
+        },
+        "Ascan_Ontime_V2": {
+          "min_date": "N/A",
+          "max_date": "1"
+        },
+        "Dscan_Ontime": {
+          "min_date": "N/A",
+          "max_date": "1"
+        },
+        "Dscan_Ontime_V2": {
+          "min_date": "N/A",
+          "max_date": "1"
+        },
+        "CWH_Order_Ontime_Flag": {
+          "min_date": "N/A",
+          "max_date": "1"
+        },
+        "LISTING_WIDTH": {
+          "min_date": "N/A",
+          "max_date": "1510000.9"
+        }
+      }
+    },
+    {
+      "table_name": "P_BM_Shipping_T.BM_BBE_TRX_NEW_2021",
+      "analysis_time": "2026-07-03 10:58:26",
+      "create_time": "Thu Jul 02 11:19:38 GMT-07:00 2026",
+      "row_count": 3421477466,
+      "pk_distinct_count": 3421477466,
+      "column_count": 401,
+      "physical_size_bytes": 1398125983051,
+      "date_columns": [
+        "Create_Date",
+        "TRANS_DT",
+        "CNCL_START_DT",
+        "FIRST_CPS_CLAIM_OPEN_DATE",
+        "FIRST_CPS_CLAIM_OPEN_DT",
+        "RCNT_CPS_CLAIM_OPEN_DATE",
+        "RCNT_CPS_CLAIM_OPEN_DT",
+        "PYMNT_TS",
+        "CHECKOUT_DT",
+        "TRKNG_UPLD_TS",
+        "ACPTNC_SCAN_TS",
+        "DLVRD_TS",
+        "HNDL_BY_TS",
+        "EDD_TS",
+        "EXTND_EDD_TS",
+        "FRST_TRKING_DTL_ID",
+        "RCNT_TRKING_DTL_ID",
+        "FRST_TRKING_ULD_DT",
+        "TRKING_DLVRD_DT",
+        "TRKING_DLVRD_TM",
+        "CDE_MAX_DT",
+        "CDE_MAX_TM",
+        "CDE_MIN_LCL_DT",
+        "CDE_MAX_LCL_DT",
+        "CK_FIRST_PYMT_DT",
+        "FIRST_PYMT_LCL_DT",
+        "ONTIME_DLVRY_FLAG",
+        "ONTIME_HNDLD_FLAG",
+        "DLVRY_DT",
+        "GMV_DT",
+        "TRANS_DT_YEAR",
+        "TRANS_DT_MONTH",
+        "TRANS_DT_YEAR_MONTH",
+        "END_DATE",
+        "TRANS_MONTH",
+        "DYN_EDD_END_DATE",
+        "DYN_EDD_MONTH",
+        "PROM_EDD_END_DATE",
+        "PROM_EDD_MONTH",
+        "GMV_DT_END_DATE",
+        "GMV_DT_MONTH",
+        "I826_Open_Date",
+        "I833_Open_Date",
+        "PKG_WIDTH_NUM",
+        "OUTBOUND_ODR_DATE",
+        "OUTBOUND_DATE",
+        "OC_FLFLMNT_ORDER_PLC_TM",
+        "OC_FLFLMNT_OUTBND_TM",
+        "OC_PACKAGE_WIDTH",
+        "OC_SINGLE_SKU_WIDTH",
+        "Ascan_5BSNS_DT_IND",
+        "Ascan_6BSNS_DT_IND",
+        "Dscan_5BSNS_DT_IND",
+        "Dscan_6BSNS_DT_IND",
+        "Tracking_Dscan_5BSNS_DT_IND",
+        "Tracking_Dscan_6BSNS_DT_IND",
+        "HNDL_5BSNS_DT_IND",
+        "HNDL_6BSNS_DT_IND",
+        "EDD_5BSNS_DT_IND",
+        "EDD_6BSNS_DT_IND",
+        "CDE_LOCAL_5BSNS_DT_IND",
+        "CDE_LOCAL_6BSNS_DT_IND",
+        "PYMNT_5BSNS_DT_IND",
+        "PYMNT_6BSNS_DT_IND",
+        "WIN_OUTBOUND_5BSNS_DT_IND",
+        "WIN_OUTBOUND_6BSNS_DT_IND",
+        "CWH_ORDER_5BSNS_DT_IND",
+        "CWH_ORDER_6BSNS_DT_IND",
+        "CWH_OUTBOUND_5BSNS_DT_IND",
+        "CWH_OUTBOUND_6BSNS_DT_IND",
+        "Ascan_Ontime",
+        "Ascan_Ontime_V2",
+        "Dscan_Ontime",
+        "Dscan_Ontime_V2",
+        "CWH_Order_Ontime_Flag",
+        "LISTING_WIDTH"
+      ],
+      "date_ranges": {
+        "Create_Date": {
+          "min_date": "2026-07-01",
+          "max_date": "2026-07-01"
+        },
+        "TRANS_DT": {
+          "min_date": "2024-01-01",
+          "max_date": "2026-07-01"
+        },
+        "CNCL_START_DT": {
+          "min_date": "2024-01-01",
+          "max_date": "2026-06-30"
+        },
+        "FIRST_CPS_CLAIM_OPEN_DATE": {
+          "min_date": "2024-01-01 08:34:38",
+          "max_date": "2026-06-30 06:04:53"
+        },
+        "FIRST_CPS_CLAIM_OPEN_DT": {
+          "min_date": "2024-01-01",
+          "max_date": "2026-06-30"
+        },
+        "RCNT_CPS_CLAIM_OPEN_DATE": {
+          "min_date": "2024-01-01 08:34:38",
+          "max_date": "2026-06-30 06:04:55"
+        },
+        "RCNT_CPS_CLAIM_OPEN_DT": {
+          "min_date": "2024-01-01",
+          "max_date": "2026-06-30"
+        },
+        "PYMNT_TS": {
+          "min_date": "1969-12-31 00:00:00",
+          "max_date": "2026-06-30 00:21:50"
+        },
+        "CHECKOUT_DT": {
+          "min_date": "1969-12-31",
+          "max_date": "2026-06-30"
+        },
+        "TRKNG_UPLD_TS": {
+          "min_date": "2024-06-01 00:03:22",
+          "max_date": "2026-06-29 23:59:59"
+        },
+        "ACPTNC_SCAN_TS": {
+          "min_date": "2024-01-02 12:03:00",
+          "max_date": "2026-07-01 06:53:00"
+        },
+        "DLVRD_TS": {
+          "min_date": "2024-01-04 10:36:00",
+          "max_date": "2026-07-01 05:44:00"
+        },
+        "HNDL_BY_TS": {
+          "min_date": "2024-06-02 08:59:59",
+          "max_date": "2027-04-13 11:59:59"
+        },
+        "EDD_TS": {
+          "min_date": "2024-06-03 14:59:59",
+          "max_date": "2027-04-22 23:59:59"
+        },
+        "EXTND_EDD_TS": {
+          "min_date": "2024-05-30 10:32:02",
+          "max_date": "2026-11-05 00:59:59"
+        },
+        "FRST_TRKING_DTL_ID": {
+          "min_date": "2027633250012",
+          "max_date": "2502448489017"
+        },
+        "RCNT_TRKING_DTL_ID": {
+          "min_date": "2027633250012",
+          "max_date": "2502448500017"
+        },
+        "FRST_TRKING_ULD_DT": {
+          "min_date": "2023-08-01",
+          "max_date": "2026-06-29"
+        },
+        "TRKING_DLVRD_DT": {
+          "min_date": "2023-08-04",
+          "max_date": "2026-07-01"
+        },
+        "TRKING_DLVRD_TM": {
+          "min_date": "2023-08-04 10:56:00",
+          "max_date": "2026-07-01 05:24:16"
+        },
+        "CDE_MAX_DT": {
+          "min_date": "2024-01-02",
+          "max_date": "2027-04-21"
+        },
+        "CDE_MAX_TM": {
+          "min_date": "2024-01-02 06:00:00",
+          "max_date": "2027-04-21 10:00:00"
+        },
+        "CDE_MIN_LCL_DT": {
+          "min_date": "2024-01-01",
+          "max_date": "2027-04-14"
+        },
+        "CDE_MAX_LCL_DT": {
+          "min_date": "2024-01-02",
+          "max_date": "2027-04-22"
+        },
+        "CK_FIRST_PYMT_DT": {
+          "min_date": "2024-01-01",
+          "max_date": "2026-07-01"
+        },
+        "FIRST_PYMT_LCL_DT": {
+          "min_date": "2023-12-31",
+          "max_date": "2026-07-01"
+        },
+        "ONTIME_DLVRY_FLAG": {
+          "min_date": "N/A",
+          "max_date": "1"
+        },
+        "ONTIME_HNDLD_FLAG": {
+          "min_date": "N/A",
+          "max_date": "1"
+        },
+        "DLVRY_DT": {
+          "min_date": "2023-08-04",
+          "max_date": "2026-07-02"
+        },
+        "GMV_DT": {
+          "min_date": "2024-01-01",
+          "max_date": "2026-06-30"
+        },
+        "TRANS_DT_YEAR": {
+          "min_date": "2024",
+          "max_date": "2026"
+        },
+        "TRANS_DT_MONTH": {
+          "min_date": "1",
+          "max_date": "12"
+        },
+        "TRANS_DT_YEAR_MONTH": {
+          "min_date": "2024M01",
+          "max_date": "2026M07"
+        },
+        "END_DATE": {
+          "min_date": "2024-01-06",
+          "max_date": "2026-07-04"
+        },
+        "TRANS_MONTH": {
+          "min_date": "2024-01-01",
+          "max_date": "2026-07-01"
+        },
+        "DYN_EDD_END_DATE": {
+          "min_date": "2024-01-06",
+          "max_date": "2027-04-24"
+        },
+        "DYN_EDD_MONTH": {
+          "min_date": "2024-01-01",
+          "max_date": "2027-04-01"
+        },
+        "PROM_EDD_END_DATE": {
+          "min_date": "2024-06-08",
+          "max_date": "2027-04-24"
+        },
+        "PROM_EDD_MONTH": {
+          "min_date": "2024-06-01",
+          "max_date": "2027-04-01"
+        },
+        "GMV_DT_END_DATE": {
+          "min_date": "2024-01-06",
+          "max_date": "2026-07-04"
+        },
+        "GMV_DT_MONTH": {
+          "min_date": "2024-01-01",
+          "max_date": "2026-06-01"
+        },
+        "I826_Open_Date": {
+          "min_date": "2020-06-08",
+          "max_date": "2026-06-26"
+        },
+        "I833_Open_Date": {
+          "min_date": "2020-07-05",
+          "max_date": "2026-06-29"
+        },
+        "PKG_WIDTH_NUM": {
+          "min_date": "N/A",
+          "max_date": "1000.0"
+        },
+        "OUTBOUND_ODR_DATE": {
+          "min_date": "0171-09-11 15:42:00",
+          "max_date": "2192-09-08 12:06:00"
+        },
+        "OUTBOUND_DATE": {
+          "min_date": "0002-11-30 00:00:00",
+          "max_date": "2192-09-08 23:59:00"
+        },
+        "OC_FLFLMNT_ORDER_PLC_TM": {
+          "min_date": "2023-12-31 23:03:11",
+          "max_date": "2026-06-29 18:14:32"
+        },
+        "OC_FLFLMNT_OUTBND_TM": {
+          "min_date": "2024-01-01 13:25:09",
+          "max_date": "2026-06-30 12:23:57"
+        },
+        "OC_PACKAGE_WIDTH": {
+          "min_date": "N/A",
+          "max_date": "9200.0"
+        },
+        "OC_SINGLE_SKU_WIDTH": {
+          "min_date": "N/A",
+          "max_date": "142"
+        },
+        "Ascan_5BSNS_DT_IND": {
+          "min_date": "12759",
+          "max_date": "13521"
+        },
+        "Ascan_6BSNS_DT_IND": {
+          "min_date": "13314",
+          "max_date": "14225"
+        },
+        "Dscan_5BSNS_DT_IND": {
+          "min_date": "12762",
+          "max_date": "13521"
+        },
+        "Dscan_6BSNS_DT_IND": {
+          "min_date": "13318",
+          "max_date": "14225"
+        },
+        "Tracking_Dscan_5BSNS_DT_IND": {
+          "min_date": "12661",
+          "max_date": "13521"
+        },
+        "Tracking_Dscan_6BSNS_DT_IND": {
+          "min_date": "13204",
+          "max_date": "14225"
+        },
+        "HNDL_5BSNS_DT_IND": {
+          "min_date": "12783",
+          "max_date": "13604"
+        },
+        "HNDL_6BSNS_DT_IND": {
+          "min_date": "13321",
+          "max_date": "14341"
+        },
+        "EDD_5BSNS_DT_IND": {
+          "min_date": "12786",
+          "max_date": "13606"
+        },
+        "EDD_6BSNS_DT_IND": {
+          "min_date": "13325",
+          "max_date": "14343"
+        },
+        "CDE_LOCAL_5BSNS_DT_IND": {
+          "min_date": "12687",
+          "max_date": "13604"
+        },
+        "CDE_LOCAL_6BSNS_DT_IND": {
+          "min_date": "13206",
+          "max_date": "14341"
+        },
+        "PYMNT_5BSNS_DT_IND": {
+          "min_date": "12683",
+          "max_date": "13522"
+        },
+        "PYMNT_6BSNS_DT_IND": {
+          "min_date": "13201",
+          "max_date": "14226"
+        },
+        "WIN_OUTBOUND_5BSNS_DT_IND": {
+          "min_date": "12744",
+          "max_date": "13373"
+        },
+        "WIN_OUTBOUND_6BSNS_DT_IND": {
+          "min_date": "13302",
+          "max_date": "14064"
+        },
+        "CWH_ORDER_5BSNS_DT_IND": {
+          "min_date": "12742",
+          "max_date": "13416"
+        },
+        "CWH_ORDER_6BSNS_DT_IND": {
+          "min_date": "13293",
+          "max_date": "14112"
+        },
+        "CWH_OUTBOUND_5BSNS_DT_IND": {
+          "min_date": "12765",
+          "max_date": "13386"
+        },
+        "CWH_OUTBOUND_6BSNS_DT_IND": {
+          "min_date": "13334",
+          "max_date": "14081"
+        },
+        "Ascan_Ontime": {
+          "min_date": "N/A",
+          "max_date": "1"
+        },
+        "Ascan_Ontime_V2": {
+          "min_date": "N/A",
+          "max_date": "1"
+        },
+        "Dscan_Ontime": {
+          "min_date": "N/A",
+          "max_date": "1"
+        },
+        "Dscan_Ontime_V2": {
+          "min_date": "N/A",
+          "max_date": "1"
+        },
+        "CWH_Order_Ontime_Flag": {
+          "min_date": "N/A",
+          "max_date": "1"
+        },
+        "LISTING_WIDTH": {
+          "min_date": "N/A",
+          "max_date": "1510000.9"
+        }
+      }
+    },
+    {
+      "table_name": "P_APAC_SUPRO_T.PROTECTION_BASE",
+      "analysis_time": "2026-07-03 10:59:19",
+      "create_time": "Tue Jun 30 01:13:30 GMT-07:00 2026",
+      "row_count": 444803233,
+      "pk_distinct_count": 444803233,
+      "column_count": 19,
+      "physical_size_bytes": 12205313622,
+      "date_columns": [
+        "TRANS_DT"
+      ],
+      "date_ranges": {
+        "TRANS_DT": {
+          "min_date": "2016-07-02",
+          "max_date": "2026-06-27"
+        }
+      }
+    },
+    {
+      "table_name": "P_KYRENE3_T.USER_BASE",
+      "analysis_time": "2026-07-03 11:01:45",
+      "create_time": "Thu Jul 02 12:14:42 GMT-07:00 2026",
+      "row_count": 2219333499,
+      "pk_distinct_count": 2219333499,
+      "column_count": 190,
+      "physical_size_bytes": 54757450829,
+      "date_columns": [
+        "UPDATE_DT",
+        "USER_CRE_DATE",
+        "SUSPEND_TIME",
+        "SELLER_DATE",
+        "P4_OPEN_DT",
+        "P4_CLOSE_DT",
+        "SNPSHT_DT",
+        "RISK_ACCT_HOLD_DT",
+        "MS_OPEN_DT",
+        "MS_CLOSE_DT",
+        "MS_GRP_OPEN_DT",
+        "MS_GRP_CLOSE_DT",
+        "I320_OPEN_DT",
+        "I320_CLOSE_DT",
+        "I359_OPEN_DT",
+        "I359_CLOSE_DT",
+        "I463_OPEN_DT",
+        "I463_CLOSE_DT",
+        "I319_OPEN_DT",
+        "I319_CLOSE_DT",
+        "I833_OPEN_DT",
+        "I833_CLOSE_DT",
+        "I237_OPEN_DT",
+        "I237_CLOSE_DT",
+        "I826_OPEN_DT",
+        "I826_CLOSE_DT",
+        "I545_OPEN_DT",
+        "I545_CLOSE_DT",
+        "I546_OPEN_DT",
+        "I546_CLOSE_DT",
+        "I547_OPEN_DT",
+        "I547_CLOSE_DT",
+        "I548_OPEN_DT",
+        "I548_CLOSE_DT",
+        "I793_OPEN_DT",
+        "I793_CLOSE_DT",
+        "I861_OPEN_DT",
+        "I861_CLOSE_DT",
+        "I1061_OPEN_DT",
+        "I1061_CLOSE_DT",
+        "I730_OPEN_DT",
+        "I730_CLOSE_DT",
+        "I880_OPEN_DT",
+        "I880_CLOSE_DT",
+        "I26_OPEN_DT",
+        "I26_CLOSE_DT",
+        "I27_OPEN_DT",
+        "I27_CLOSE_DT",
+        "I736_OPEN_DT",
+        "I736_CLOSE_DT",
+        "I763_OPEN_DT",
+        "I763_CLOSE_DT",
+        "I972_OPEN_DT",
+        "I972_CLOSE_DT",
+        "I172_OPEN_DT",
+        "I172_CLOSE_DT",
+        "I188_OPEN_DT",
+        "I188_CLOSE_DT",
+        "I233_OPEN_DT",
+        "I233_CLOSE_DT",
+        "I873_OPEN_DT",
+        "I873_CLOSE_DT",
+        "I901_OPEN_DT",
+        "I901_CLOSE_DT",
+        "I902_OPEN_DT",
+        "I902_CLOSE_DT",
+        "I669_OPEN_DT",
+        "I669_CLOSE_DT",
+        "I777_OPEN_DT",
+        "I777_CLOSE_DT"
+      ],
+      "date_ranges": {
+        "UPDATE_DT": {
+          "min_date": "2026-07-01",
+          "max_date": "2026-07-01"
+        },
+        "USER_CRE_DATE": {
+          "min_date": "1969-12-31 00:00:00",
+          "max_date": "2026-07-01 01:09:17"
+        },
+        "SUSPEND_TIME": {
+          "min_date": "2000-02-29 01:49:36",
+          "max_date": "2026-06-30 23:59:48"
+        },
+        "SELLER_DATE": {
+          "min_date": "0007-04-02",
+          "max_date": "2026-06-30"
+        },
+        "P4_OPEN_DT": {
+          "min_date": "2009-11-13 01:21:17",
+          "max_date": "2026-06-29 15:18:00"
+        },
+        "P4_CLOSE_DT": {
+          "min_date": "2011-01-17 18:59:43",
+          "max_date": "2026-06-29 08:30:59"
+        },
+        "SNPSHT_DT": {
+          "min_date": "2026-06-30",
+          "max_date": "2026-06-30"
+        },
+        "RISK_ACCT_HOLD_DT": {
+          "min_date": "N/A",
+          "max_date": "2026-06-25 16:59:49"
+        },
+        "MS_OPEN_DT": {
+          "min_date": "2022-05-31",
+          "max_date": "2026-06-26"
+        },
+        "MS_CLOSE_DT": {
+          "min_date": "2022-08-03",
+          "max_date": "2026-06-04"
+        },
+        "MS_GRP_OPEN_DT": {
+          "min_date": "2022-05-31",
+          "max_date": "2026-03-19"
+        },
+        "MS_GRP_CLOSE_DT": {
+          "min_date": "2022-09-07",
+          "max_date": "2026-06-04"
+        },
+        "I320_OPEN_DT": {
+          "min_date": "2013-04-19",
+          "max_date": "2026-06-29"
+        },
+        "I320_CLOSE_DT": {
+          "min_date": "2013-04-21",
+          "max_date": "2026-06-30"
+        },
+        "I359_OPEN_DT": {
+          "min_date": "2013-04-03",
+          "max_date": "2026-06-26"
+        },
+        "I359_CLOSE_DT": {
+          "min_date": "2013-04-07",
+          "max_date": "2026-06-28"
+        },
+        "I463_OPEN_DT": {
+          "min_date": "2016-02-16",
+          "max_date": "2026-06-29"
+        },
+        "I463_CLOSE_DT": {
+          "min_date": "2016-05-03",
+          "max_date": "2026-05-01"
+        },
+        "I319_OPEN_DT": {
+          "min_date": "2012-08-20",
+          "max_date": "2025-10-09"
+        },
+        "I319_CLOSE_DT": {
+          "min_date": "2012-08-21",
+          "max_date": "2026-06-29"
+        },
+        "I833_OPEN_DT": {
+          "min_date": "2020-07-05",
+          "max_date": "2026-06-29"
+        },
+        "I833_CLOSE_DT": {
+          "min_date": "2020-07-16",
+          "max_date": "2026-06-25"
+        },
+        "I237_OPEN_DT": {
+          "min_date": "2011-09-07",
+          "max_date": "2026-06-28"
+        },
+        "I237_CLOSE_DT": {
+          "min_date": "2011-10-24",
+          "max_date": "2026-06-29"
+        },
+        "I826_OPEN_DT": {
+          "min_date": "2020-06-08",
+          "max_date": "2026-06-26"
+        },
+        "I826_CLOSE_DT": {
+          "min_date": "2020-06-12",
+          "max_date": "2026-06-23"
+        },
+        "I545_OPEN_DT": {
+          "min_date": "2017-11-20",
+          "max_date": "2026-06-26"
+        },
+        "I545_CLOSE_DT": {
+          "min_date": "2017-11-22",
+          "max_date": "2026-06-29"
+        },
+        "I546_OPEN_DT": {
+          "min_date": "2019-01-27",
+          "max_date": "2026-06-26"
+        },
+        "I546_CLOSE_DT": {
+          "min_date": "2020-04-30",
+          "max_date": "2026-06-29"
+        },
+        "I547_OPEN_DT": {
+          "min_date": "2020-05-14",
+          "max_date": "2026-06-26"
+        },
+        "I547_CLOSE_DT": {
+          "min_date": "2020-05-21",
+          "max_date": "2026-06-29"
+        },
+        "I548_OPEN_DT": {
+          "min_date": "2018-03-22",
+          "max_date": "2026-06-26"
+        },
+        "I548_CLOSE_DT": {
+          "min_date": "2018-03-22",
+          "max_date": "2026-06-29"
+        },
+        "I793_OPEN_DT": {
+          "min_date": "2020-05-06",
+          "max_date": "2025-08-20"
+        },
+        "I793_CLOSE_DT": {
+          "min_date": "2020-05-06",
+          "max_date": "2025-09-13"
+        },
+        "I861_OPEN_DT": {
+          "min_date": "2020-08-25",
+          "max_date": "2026-06-28"
+        },
+        "I861_CLOSE_DT": {
+          "min_date": "2020-11-26",
+          "max_date": "2026-06-29"
+        },
+        "I1061_OPEN_DT": {
+          "min_date": "2023-03-23",
+          "max_date": "2026-06-28"
+        },
+        "I1061_CLOSE_DT": {
+          "min_date": "2023-03-27",
+          "max_date": "2026-06-29"
+        },
+        "I730_OPEN_DT": {
+          "min_date": "2019-08-07",
+          "max_date": "2026-06-29"
+        },
+        "I730_CLOSE_DT": {
+          "min_date": "2019-08-14",
+          "max_date": "2026-06-29"
+        },
+        "I880_OPEN_DT": {
+          "min_date": "2020-10-29",
+          "max_date": "2026-06-29"
+        },
+        "I880_CLOSE_DT": {
+          "min_date": "2020-11-10",
+          "max_date": "2026-06-25"
+        },
+        "I26_OPEN_DT": {
+          "min_date": "2006-02-09",
+          "max_date": "2026-06-29"
+        },
+        "I26_CLOSE_DT": {
+          "min_date": "2006-02-10",
+          "max_date": "2026-06-30"
+        },
+        "I27_OPEN_DT": {
+          "min_date": "2006-03-06",
+          "max_date": "2026-06-29"
+        },
+        "I27_CLOSE_DT": {
+          "min_date": "2006-04-20",
+          "max_date": "2026-06-29"
+        },
+        "I736_OPEN_DT": {
+          "min_date": "2019-10-03",
+          "max_date": "2026-06-29"
+        },
+        "I736_CLOSE_DT": {
+          "min_date": "2019-10-13",
+          "max_date": "2026-06-30"
+        },
+        "I763_OPEN_DT": {
+          "min_date": "2020-04-28",
+          "max_date": "2026-06-29"
+        },
+        "I763_CLOSE_DT": {
+          "min_date": "2020-04-30",
+          "max_date": "2026-06-30"
+        },
+        "I972_OPEN_DT": {
+          "min_date": "2021-10-11",
+          "max_date": "2026-06-29"
+        },
+        "I972_CLOSE_DT": {
+          "min_date": "2021-10-21",
+          "max_date": "2026-06-29"
+        },
+        "I172_OPEN_DT": {
+          "min_date": "2009-05-10",
+          "max_date": "2026-06-29"
+        },
+        "I172_CLOSE_DT": {
+          "min_date": "2009-08-18",
+          "max_date": "2026-06-30"
+        },
+        "I188_OPEN_DT": {
+          "min_date": "2009-10-20",
+          "max_date": "2026-06-29"
+        },
+        "I188_CLOSE_DT": {
+          "min_date": "2009-11-04",
+          "max_date": "2026-06-30"
+        },
+        "I233_OPEN_DT": {
+          "min_date": "2010-07-29",
+          "max_date": "2026-06-29"
+        },
+        "I233_CLOSE_DT": {
+          "min_date": "2010-08-04",
+          "max_date": "2026-06-29"
+        },
+        "I873_OPEN_DT": {
+          "min_date": "2020-10-26",
+          "max_date": "2026-06-29"
+        },
+        "I873_CLOSE_DT": {
+          "min_date": "2021-04-07",
+          "max_date": "2026-06-29"
+        },
+        "I901_OPEN_DT": {
+          "min_date": "2021-03-22",
+          "max_date": "2026-06-29"
+        },
+        "I901_CLOSE_DT": {
+          "min_date": "2021-03-22",
+          "max_date": "2026-06-29"
+        },
+        "I902_OPEN_DT": {
+          "min_date": "2021-03-24",
+          "max_date": "2025-06-22"
+        },
+        "I902_CLOSE_DT": {
+          "min_date": "2021-03-25",
+          "max_date": "2026-06-29"
+        },
+        "I669_OPEN_DT": {
+          "min_date": "2019-05-17",
+          "max_date": "2026-06-29"
+        },
+        "I669_CLOSE_DT": {
+          "min_date": "2019-05-20",
+          "max_date": "2026-06-29"
+        },
+        "I777_OPEN_DT": {
+          "min_date": "2020-02-19",
+          "max_date": "2026-05-28"
+        },
+        "I777_CLOSE_DT": {
+          "min_date": "2021-11-07",
+          "max_date": "2026-06-26"
+        }
+      }
+    },
+    {
+      "table_name": "P_KYRENE3_T.LISTING_BASE",
+      "analysis_time": "2026-07-03 11:03:04",
+      "create_time": "Thu Jul 02 12:18:18 GMT-07:00 2026",
+      "row_count": 9789966702,
+      "pk_distinct_count": 9789966702,
+      "column_count": 48,
+      "physical_size_bytes": 1034182139770,
+      "date_columns": [
+        "UPDATE_DT",
+        "AUCT_START_DT",
+        "AUCT_END_DT"
+      ],
+      "date_ranges": {
+        "UPDATE_DT": {
+          "min_date": "2026-07-01",
+          "max_date": "2026-07-01"
+        },
+        "AUCT_START_DT": {
+          "min_date": "2004-06-28",
+          "max_date": "2026-06-28"
+        },
+        "AUCT_END_DT": {
+          "min_date": "2021-01-01",
+          "max_date": "2026-08-06"
+        }
+      }
+    },
+    {
+      "table_name": "P_KYRENE3_T.MACNOTE_BASE",
+      "analysis_time": "2026-07-03 11:04:51",
+      "create_time": "Thu Jul 02 12:30:15 GMT-07:00 2026",
+      "row_count": 3307903870,
+      "pk_distinct_count": 3307903870,
+      "column_count": 49,
+      "physical_size_bytes": 131302677783,
+      "date_columns": [
+        "UPDATE_DT",
+        "CREATION_DT",
+        "CREATION_DATE",
+        "ISSUE_OPEN_DT",
+        "ISSUE_CLOSE_DT",
+        "TIME_GAP",
+        "DT_RNK"
+      ],
+      "date_ranges": {
+        "UPDATE_DT": {
+          "min_date": "2026-07-01",
+          "max_date": "2026-07-01"
+        },
+        "CREATION_DT": {
+          "min_date": "2021-01-01",
+          "max_date": "2026-06-30"
+        },
+        "CREATION_DATE": {
+          "min_date": "2021-01-01 00:00:00",
+          "max_date": "2026-06-30 23:59:59"
+        },
+        "ISSUE_OPEN_DT": {
+          "min_date": "2020-12-31 23:59:59",
+          "max_date": "2026-06-30 23:59:59"
+        },
+        "ISSUE_CLOSE_DT": {
+          "min_date": "2021-01-01 00:00:52",
+          "max_date": "2026-07-01 04:54:44"
+        },
+        "TIME_GAP": {
+          "min_date": "N/A",
+          "max_date": "86400"
+        },
+        "DT_RNK": {
+          "min_date": "1",
+          "max_date": "2007"
+        }
+      }
+    },
+    {
+      "table_name": "P_XINYE_T.RETURN_BASE",
+      "analysis_time": "2026-07-03 11:05:00",
+      "create_time": "Wed Jul 01 18:28:04 GMT-07:00 2026",
+      "row_count": 54289834,
+      "pk_distinct_count": 54289834,
+      "column_count": 101,
+      "physical_size_bytes": 4734752578,
+      "date_columns": [
+        "UPDATE_DT",
+        "RTRN_OPEN_DT",
+        "RTRN_CLOSE_DT",
+        "TRANS_DT",
+        "IF_EASY_RETURN_MANDATE",
+        "RETURN_ADDRESS_MAP_DTL",
+        "SLR_CHOSE_EBAY_LABEL_DT",
+        "SLR_PRVD_OWN_LABEL_DT",
+        "SLR_NOT_PRVD_OWN_LABEL_DT"
+      ],
+      "date_ranges": {
+        "UPDATE_DT": {
+          "min_date": "2026-06-27",
+          "max_date": "2026-06-27"
+        },
+        "RTRN_OPEN_DT": {
+          "min_date": "2024-06-25",
+          "max_date": "2026-06-26"
+        },
+        "RTRN_CLOSE_DT": {
+          "min_date": "2024-06-25",
+          "max_date": "2026-06-27"
+        },
+        "TRANS_DT": {
+          "min_date": "2024-06-25",
+          "max_date": "2026-06-25"
+        },
+        "IF_EASY_RETURN_MANDATE": {
+          "min_date": "N/A",
+          "max_date": "1"
+        },
+        "RETURN_ADDRESS_MAP_DTL": {
+          "min_date": "N/A",
+          "max_date": "N/A"
+        },
+        "SLR_CHOSE_EBAY_LABEL_DT": {
+          "min_date": "2024-06-26",
+          "max_date": "2026-06-26"
+        },
+        "SLR_PRVD_OWN_LABEL_DT": {
+          "min_date": "2024-06-26",
+          "max_date": "2026-06-26"
+        },
+        "SLR_NOT_PRVD_OWN_LABEL_DT": {
+          "min_date": "2024-06-26",
+          "max_date": "2026-06-26"
+        }
+      }
+    },
+    {
+      "table_name": "p_lliu20_t.icbt_trans_flag",
+      "analysis_time": "2026-07-03 11:05:17",
+      "create_time": "Thu Jul 02 09:19:33 GMT-07:00 2026",
+      "row_count": 187773559,
+      "pk_distinct_count": 182509946,
+      "column_count": 188,
+      "physical_size_bytes": 51929084342,
+      "date_columns": [
+        "trans_dt",
+        "DSPT_AMT_intmdt",
+        "HNDL_BY_TS",
+        "CDE_MAX_DT",
+        "TRKNG_UPLD_TS",
+        "ACPTNC_SCAN_TM",
+        "DLVRD_TS",
+        "FRST_TRKING_DTL_ID",
+        "RCNT_TRKING_DTL_ID",
+        "ACPTNC_SCAN_DT1",
+        "DLVRD_DT1",
+        "ACPTNC_SCAN_DT2",
+        "DLVRD_DT2",
+        "CARRIER_RETURN_DT",
+        "PRCL_WDTH_RANGE",
+        "rcnt_cps_claim_open_dt",
+        "rcnt_cps_claim_close_dt",
+        "dspt_event_dt",
+        "cb_clsd_ts",
+        "FINAL_HOLD_DT",
+        "FINAL_RELEASE_DT",
+        "SLR_REG_DT",
+        "TRANS_PAID_DT",
+        "FDBK_RCVD_DT",
+        "update_date"
+      ],
+      "date_ranges": {
+        "trans_dt": {
+          "min_date": "2025-07-01",
+          "max_date": "2026-06-29"
+        },
+        "DSPT_AMT_intmdt": {
+          "min_date": "N/A",
+          "max_date": "32925.0"
+        },
+        "HNDL_BY_TS": {
+          "min_date": "2025-07-02",
+          "max_date": "2026-09-09"
+        },
+        "CDE_MAX_DT": {
+          "min_date": "2025-07-01",
+          "max_date": "2026-11-03"
+        },
+        "TRKNG_UPLD_TS": {
+          "min_date": "2025-07-01",
+          "max_date": "2026-06-29"
+        },
+        "ACPTNC_SCAN_TM": {
+          "min_date": "2025-03-13",
+          "max_date": "2026-07-01"
+        },
+        "DLVRD_TS": {
+          "min_date": "2025-03-22",
+          "max_date": "2026-07-01"
+        },
+        "FRST_TRKING_DTL_ID": {
+          "min_date": "2204007126012",
+          "max_date": "2502448485017"
+        },
+        "RCNT_TRKING_DTL_ID": {
+          "min_date": "2204007126012",
+          "max_date": "2502448485017"
+        },
+        "ACPTNC_SCAN_DT1": {
+          "min_date": "2025-03-13",
+          "max_date": "2026-07-02"
+        },
+        "DLVRD_DT1": {
+          "min_date": "2025-03-24",
+          "max_date": "2026-07-02"
+        },
+        "ACPTNC_SCAN_DT2": {
+          "min_date": "2025-03-13",
+          "max_date": "2026-07-02"
+        },
+        "DLVRD_DT2": {
+          "min_date": "2025-03-24",
+          "max_date": "2026-07-02"
+        },
+        "CARRIER_RETURN_DT": {
+          "min_date": "2025-07-03",
+          "max_date": "2026-06-30"
+        },
+        "PRCL_WDTH_RANGE": {
+          "min_date": "0.01",
+          "max_date": "400.0"
+        },
+        "rcnt_cps_claim_open_dt": {
+          "min_date": "2025-07-01",
+          "max_date": "2026-06-30"
+        },
+        "rcnt_cps_claim_close_dt": {
+          "min_date": "2025-07-01",
+          "max_date": "2026-06-30"
+        },
+        "dspt_event_dt": {
+          "min_date": "2025-07-01",
+          "max_date": "2026-06-30"
+        },
+        "cb_clsd_ts": {
+          "min_date": "2025-07-02 01:28:53",
+          "max_date": "2026-06-30 04:10:17"
+        },
+        "FINAL_HOLD_DT": {
+          "min_date": "2025-07-01",
+          "max_date": "2026-06-29"
+        },
+        "FINAL_RELEASE_DT": {
+          "min_date": "2022-07-07",
+          "max_date": "2026-06-30"
+        },
+        "SLR_REG_DT": {
+          "min_date": "2002-08-15",
+          "max_date": "2026-06-29"
+        },
+        "TRANS_PAID_DT": {
+          "min_date": "1969-12-31",
+          "max_date": "2026-06-30"
+        },
+        "FDBK_RCVD_DT": {
+          "min_date": "2025-07-01",
+          "max_date": "2026-06-30"
+        },
+        "update_date": {
+          "min_date": "2026-07-01",
+          "max_date": "2026-07-01"
+        }
+      }
+    },
+    {
+      "table_name": "p_lliu20_t.icbt_seller_flag",
+      "analysis_time": "2026-07-03 11:05:25",
+      "create_time": "Thu Jul 02 09:23:13 GMT-07:00 2026",
+      "row_count": 18392451,
+      "pk_distinct_count": 18392451,
+      "column_count": 350,
+      "physical_size_bytes": 857404594,
+      "date_columns": [
+        "SLR_REG_DT",
+        "update_date"
+      ],
+      "date_ranges": {
+        "SLR_REG_DT": {
+          "min_date": "2002-08-15",
+          "max_date": "2026-06-30"
+        },
+        "update_date": {
+          "min_date": "2026-07-01",
+          "max_date": "2026-07-01"
+        }
+      }
+    },
+    {
+      "table_name": "p_lliu20_t.GC_large_loss_link",
+      "analysis_time": "2026-07-03 11:05:28",
+      "create_time": "Thu Jun 04 11:07:27 GMT-07:00 2026",
+      "row_count": 4540017,
+      "pk_distinct_count": null,
+      "column_count": 11,
+      "physical_size_bytes": 14711079,
+      "date_columns": [
+        "SLR_REG_DT"
+      ],
+      "date_ranges": {
+        "SLR_REG_DT": {
+          "min_date": "2002-09-03",
+          "max_date": "2026-05-05"
+        }
+      }
+    },
+    {
+      "table_name": "p_lliu20_t.XID_GC",
+      "analysis_time": "2026-07-03 11:05:35",
+      "create_time": "Tue Mar 03 00:28:58 GMT-07:00 2026",
+      "row_count": 221025604,
+      "pk_distinct_count": null,
+      "column_count": 5,
+      "physical_size_bytes": 1604357586,
+      "date_columns": [
+        "update_date"
+      ],
+      "date_ranges": {
+        "update_date": {
+          "min_date": "2026-02-25",
+          "max_date": "2026-02-26"
+        }
+      }
+    },
+    {
+      "table_name": "p_lliu20_t.XID_link_prblty_GC",
+      "analysis_time": "2026-07-03 11:05:39",
+      "create_time": "Tue Mar 03 00:38:23 GMT-07:00 2026",
+      "row_count": 120212910,
+      "pk_distinct_count": null,
+      "column_count": 5,
+      "physical_size_bytes": 907190126,
+      "date_columns": [],
+      "date_ranges": {}
+    },
+    {
+      "table_name": "p_lliu20_t.DSA_prci_item_report_seller",
+      "analysis_time": "2026-07-03 11:06:01",
+      "create_time": "Thu Jul 02 10:29:51 GMT-07:00 2026",
+      "row_count": 91378397,
+      "pk_distinct_count": null,
+      "column_count": 226,
+      "physical_size_bytes": 28332554905,
+      "date_columns": [
+        "reported_dt",
+        "reported_date",
+        "case_worked_start_dt",
+        "case_worked_start_date",
+        "case_worked_end_dt",
+        "case_worked_end_date",
+        "retail_week_end_dt",
+        "item_appeal_date",
+        "item_appeal_dt",
+        "recall_dt",
+        "table_refresh_date",
+        "unhold_date",
+        "unhold_dt",
+        "item_reinstate_dt",
+        "item_hold_date",
+        "item_unhold_date",
+        "dt_reported",
+        "TIMEFRAME",
+        "SLR_REG_DT",
+        "update_date"
+      ],
+      "date_ranges": {
+        "reported_dt": {
+          "min_date": "2021-01-01",
+          "max_date": "2026-06-30"
+        },
+        "reported_date": {
+          "min_date": "2021-01-01 03:34:58",
+          "max_date": "2026-06-30 16:00:19"
+        },
+        "case_worked_start_dt": {
+          "min_date": "2021-01-01",
+          "max_date": "2026-06-29"
+        },
+        "case_worked_start_date": {
+          "min_date": "2021-01-01 03:51:11",
+          "max_date": "2026-06-29 23:58:13"
+        },
+        "case_worked_end_dt": {
+          "min_date": "2021-01-01",
+          "max_date": "2026-06-29"
+        },
+        "case_worked_end_date": {
+          "min_date": "2021-01-01 03:51:11",
+          "max_date": "2026-06-29 23:58:13"
+        },
+        "retail_week_end_dt": {
+          "min_date": "2021-01-02",
+          "max_date": "2026-07-04"
+        },
+        "item_appeal_date": {
+          "min_date": "N/A",
+          "max_date": "2026-06-29 18:00:00"
+        },
+        "item_appeal_dt": {
+          "min_date": "N/A",
+          "max_date": "2026-06-29"
+        },
+        "recall_dt": {
+          "min_date": "1979-01-01",
+          "max_date": "2303-03-27"
+        },
+        "table_refresh_date": {
+          "min_date": "2026-06-30 20:30:36.723202",
+          "max_date": "2026-06-30 20:30:36.723202"
+        },
+        "unhold_date": {
+          "min_date": "2023-10-19 12:25:33",
+          "max_date": "2026-06-30 12:06:47"
+        },
+        "unhold_dt": {
+          "min_date": "2023-10-19",
+          "max_date": "2026-06-30"
+        },
+        "item_reinstate_dt": {
+          "min_date": "2021-12-26",
+          "max_date": "2026-06-29"
+        },
+        "item_hold_date": {
+          "min_date": "2023-10-10 17:27:00",
+          "max_date": "2026-06-30 12:06:52"
+        },
+        "item_unhold_date": {
+          "min_date": "2023-10-19 12:25:33",
+          "max_date": "2026-06-30 12:06:47"
+        },
+        "dt_reported": {
+          "min_date": "2021-01-01",
+          "max_date": "2026-06-30"
+        },
+        "TIMEFRAME": {
+          "min_date": "N/A",
+          "max_date": "365"
+        },
+        "SLR_REG_DT": {
+          "min_date": "2002-08-15",
+          "max_date": "2026-06-29"
+        },
+        "update_date": {
+          "min_date": "2026-07-01",
+          "max_date": "2026-07-01"
+        }
+      }
+    },
+    {
+      "table_name": "p_lliu20_t.prci_suspend_restrict",
+      "analysis_time": "2026-07-03 11:06:07",
+      "create_time": "Thu Jul 02 10:31:48 GMT-07:00 2026",
+      "row_count": 1804582,
+      "pk_distinct_count": null,
+      "column_count": 57,
+      "physical_size_bytes": 85677519,
+      "date_columns": [
+        "reported_dt",
+        "retail_week_end_dt",
+        "i305_open_dt",
+        "i305_close_dt",
+        "SLR_REG_DT"
+      ],
+      "date_ranges": {
+        "reported_dt": {
+          "min_date": "2021-01-01",
+          "max_date": "2026-06-29"
+        },
+        "retail_week_end_dt": {
+          "min_date": "2021-01-02",
+          "max_date": "2026-07-04"
+        },
+        "i305_open_dt": {
+          "min_date": "2012-05-14",
+          "max_date": "2026-06-30"
+        },
+        "i305_close_dt": {
+          "min_date": "2012-05-20",
+          "max_date": "2026-06-21"
+        },
+        "SLR_REG_DT": {
+          "min_date": "2002-08-15",
+          "max_date": "2026-06-10"
+        }
+      }
+    },
+    {
+      "table_name": "P_LLIU20_T.TRO_yrly_rpt_raw",
+      "analysis_time": "2026-07-03 11:06:11",
+      "create_time": "Thu Jul 02 10:34:10 GMT-07:00 2026",
+      "row_count": 194778,
+      "pk_distinct_count": null,
+      "column_count": 37,
+      "physical_size_bytes": 4932309,
+      "date_columns": [
+        "dt_reported",
+        "dt_reinstated",
+        "report_dt"
+      ],
+      "date_ranges": {
+        "dt_reported": {
+          "min_date": "2004-06-10",
+          "max_date": "2026-06-30"
+        },
+        "dt_reinstated": {
+          "min_date": "2004-09-03",
+          "max_date": "2026-06-12"
+        },
+        "report_dt": {
+          "min_date": "2004-06-12",
+          "max_date": "2026-07-04"
+        }
+      }
+    },
+    {
+      "table_name": "p_shally_t.icbt_acct_info",
+      "analysis_time": "2026-07-03 11:07:30",
+      "create_time": "Thu Jul 02 15:07:52 GMT-07:00 2026",
+      "row_count": 319710719,
+      "pk_distinct_count": 319710719,
+      "column_count": 42,
+      "physical_size_bytes": 8898552752,
+      "date_columns": [
+        "slr_reg_dt",
+        "user_cre_date",
+        "tuv_reg_dt",
+        "max_privilege_date",
+        "max_revoke_date",
+        "first_spg_date",
+        "parc_cre_dt",
+        "i730_cre_dt",
+        "update_dt"
+      ],
+      "date_ranges": {
+        "slr_reg_dt": {
+          "min_date": "2002-08-15",
+          "max_date": "2026-06-30"
+        },
+        "user_cre_date": {
+          "min_date": "1969-12-31 00:00:00",
+          "max_date": "2026-07-01 01:09:17"
+        },
+        "tuv_reg_dt": {
+          "min_date": "2002-08-15",
+          "max_date": "2026-06-30"
+        },
+        "max_privilege_date": {
+          "min_date": "1969-12-31",
+          "max_date": "2026-06-30"
+        },
+        "max_revoke_date": {
+          "min_date": "2020-10-30 09:01:19",
+          "max_date": "2026-06-22 23:41:14"
+        },
+        "first_spg_date": {
+          "min_date": "2002-08-15 17:20:45",
+          "max_date": "2026-06-22 23:41:12"
+        },
+        "parc_cre_dt": {
+          "min_date": "2021-05-24",
+          "max_date": "2026-06-30"
+        },
+        "i730_cre_dt": {
+          "min_date": "2019-08-07 01:57:59",
+          "max_date": "2026-06-29 22:34:01"
+        },
+        "update_dt": {
+          "min_date": "2026-07-01",
+          "max_date": "2026-07-01"
+        }
+      }
+    },
+    {
+      "table_name": "p_shally_t.gpsr_in_scope_listing",
+      "analysis_time": "2026-07-03 11:09:01",
+      "create_time": "Thu Jul 02 15:19:17 GMT-07:00 2026",
+      "row_count": 932757800,
+      "pk_distinct_count": 932757800,
+      "column_count": 25,
+      "physical_size_bytes": 7593973263,
+      "date_columns": [
+        "UPDATE_DATE"
+      ],
+      "date_ranges": {
+        "UPDATE_DATE": {
+          "min_date": "2026-07-01",
+          "max_date": "2026-07-01"
+        }
+      }
+    },
+    {
+      "table_name": "p_shally_reg_t.weee_in_scope_listing",
+      "analysis_time": "2026-07-03 11:09:33",
+      "create_time": "Thu Jul 02 15:40:00 GMT-07:00 2026",
+      "row_count": 80116098,
+      "pk_distinct_count": 79933567,
+      "column_count": 8,
+      "physical_size_bytes": 644330591,
+      "date_columns": [
+        "UPDATE_DATE"
+      ],
+      "date_ranges": {
+        "UPDATE_DATE": {
+          "min_date": "2026-07-01",
+          "max_date": "2026-07-01"
+        }
+      }
+    },
+    {
+      "table_name": "p_shally_t.ce_audit_tracking",
+      "analysis_time": "2026-07-03 11:09:36",
+      "create_time": "Thu Jul 02 15:41:38 GMT-07:00 2026",
+      "row_count": 604420,
+      "pk_distinct_count": null,
+      "column_count": 23,
+      "physical_size_bytes": 45462468,
+      "date_columns": [
+        "AUDIT_START_DT",
+        "GRACE_END_DT",
+        "REMEDY_START_DT",
+        "REMEDY_GRACE_DT",
+        "REMEDY_UPLOAD_DT",
+        "UPDATE_DT"
+      ],
+      "date_ranges": {
+        "AUDIT_START_DT": {
+          "min_date": "2024-04-04",
+          "max_date": "2026-06-29"
+        },
+        "GRACE_END_DT": {
+          "min_date": "2024-04-11",
+          "max_date": "2026-07-06"
+        },
+        "REMEDY_START_DT": {
+          "min_date": "1999-12-31",
+          "max_date": "2026-06-29"
+        },
+        "REMEDY_GRACE_DT": {
+          "min_date": "1999-12-31",
+          "max_date": "2026-07-06"
+        },
+        "REMEDY_UPLOAD_DT": {
+          "min_date": "1999-12-31",
+          "max_date": "2026-06-30"
+        },
+        "UPDATE_DT": {
+          "min_date": "2026-07-01",
+          "max_date": "2026-07-01"
+        }
+      }
+    },
+    {
+      "table_name": "p_shally_t.neg_bal_acct_age",
+      "analysis_time": "2026-07-03 11:09:43",
+      "create_time": "Thu Jul 02 15:45:46 GMT-07:00 2026",
+      "row_count": 4536086,
+      "pk_distinct_count": 4536086,
+      "column_count": 27,
+      "physical_size_bytes": 218145304,
+      "date_columns": [
+        "SNPSHT_DT",
+        "UPDATE_DT",
+        "LAST_TRXN_DT"
+      ],
+      "date_ranges": {
+        "SNPSHT_DT": {
+          "min_date": "2026-06-30 00:00:00",
+          "max_date": "2026-06-30 00:00:00"
+        },
+        "UPDATE_DT": {
+          "min_date": "2026-07-01",
+          "max_date": "2026-07-01"
+        },
+        "LAST_TRXN_DT": {
+          "min_date": "2004-08-02 21:53:59",
+          "max_date": "2026-06-30 23:24:52"
+        }
+      }
+    },
+    {
+      "table_name": "p_shally_t.icbt_largeloss_acct_daily",
+      "analysis_time": "2026-07-03 11:09:48",
+      "create_time": "Thu Jul 02 15:51:40 GMT-07:00 2026",
+      "row_count": 37912197,
+      "pk_distinct_count": null,
+      "column_count": 19,
+      "physical_size_bytes": 1233458458,
+      "date_columns": [
+        "LAST_TRXN_DT",
+        "report_dt",
+        "update_dt"
+      ],
+      "date_ranges": {
+        "LAST_TRXN_DT": {
+          "min_date": "2018-08-31 00:00:00",
+          "max_date": "2026-06-30 23:12:30"
+        },
+        "report_dt": {
+          "min_date": "2024-02-26",
+          "max_date": "2026-06-30"
+        },
+        "update_dt": {
+          "min_date": "2024-02-28",
+          "max_date": "2026-07-01"
+        }
+      }
+    },
+    {
+      "table_name": "p_shally_reg_t.epr_de_in_scope_listing",
+      "analysis_time": "2026-07-03 11:09:53",
+      "create_time": "Mon Jun 29 17:34:04 GMT-07:00 2026",
+      "row_count": 366832659,
+      "pk_distinct_count": null,
+      "column_count": 9,
+      "physical_size_bytes": 2959090956,
+      "date_columns": [
+        "UPDATE_DATE"
+      ],
+      "date_ranges": {
+        "UPDATE_DATE": {
+          "min_date": "2026-06-24",
+          "max_date": "2026-06-24"
+        }
+      }
+    },
+    {
+      "table_name": "p_jp_bmo_t.jp_ag_elb_item",
+      "analysis_time": "2026-07-03 11:10:07",
+      "create_time": "Thu Jul 02 06:56:02 GMT-07:00 2026",
+      "row_count": 42765534,
+      "pk_distinct_count": null,
+      "column_count": 24,
+      "physical_size_bytes": 721091384,
+      "date_columns": [
+        "auct_start_dt",
+        "auct_end_dt",
+        "evltn_ts",
+        "evltn_end_ts",
+        "item_cndtn_id",
+        "item_cdt_name",
+        "update_dt"
+      ],
+      "date_ranges": {
+        "auct_start_dt": {
+          "min_date": "1969-12-31",
+          "max_date": "2026-07-21"
+        },
+        "auct_end_dt": {
+          "min_date": "1969-12-31",
+          "max_date": "2026-08-21"
+        },
+        "evltn_ts": {
+          "min_date": "2023-11-14 17:17:30.672000",
+          "max_date": "2026-06-30 19:58:08.480000"
+        },
+        "evltn_end_ts": {
+          "min_date": "2023-11-15 13:00:29.190000",
+          "max_date": "2099-12-31 00:00:00"
+        },
+        "item_cndtn_id": {
+          "min_date": "1000",
+          "max_date": "7000"
+        },
+        "item_cdt_name": {
+          "min_date": "FOR PARTS OR NOT WORKING",
+          "max_date": "VERY GOOD"
+        },
+        "update_dt": {
+          "min_date": "2026-07-01",
+          "max_date": "2026-07-01"
+        }
+      }
+    },
+    {
+      "table_name": "p_shally_reg_t.global_trans_daily_detail",
+      "analysis_time": "2026-07-03 11:10:21",
+      "create_time": "Mon Jun 29 16:15:05 GMT-07:00 2026",
+      "row_count": 2734783366,
+      "pk_distinct_count": null,
+      "column_count": 74,
+      "physical_size_bytes": 403308889283,
+      "date_columns": [
+        "trans_dt",
+        "first_pymt_dt",
+        "hndl_by_dt",
+        "trans_shipped_dt",
+        "frst_trking_uld_dt",
+        "trking_src_cre_dt",
+        "acptnc_scan_ts",
+        "dlvrd_ts",
+        "edd_dt",
+        "buyer_cre_date",
+        "claim_open_dt",
+        "claim_close_dt",
+        "dspt_open_dt",
+        "dspt_close_dt",
+        "update_dt"
+      ],
+      "date_ranges": {
+        "trans_dt": {
+          "min_date": "2024-06-19",
+          "max_date": "2026-06-22"
+        },
+        "first_pymt_dt": {
+          "min_date": "2024-06-19",
+          "max_date": "2026-06-23"
+        },
+        "hndl_by_dt": {
+          "min_date": "2024-06-19",
+          "max_date": "2027-04-02"
+        },
+        "trans_shipped_dt": {
+          "min_date": "1969-12-31",
+          "max_date": "2026-06-26"
+        },
+        "frst_trking_uld_dt": {
+          "min_date": "2024-02-01",
+          "max_date": "2026-06-22"
+        },
+        "trking_src_cre_dt": {
+          "min_date": "2024-02-01",
+          "max_date": "2026-06-23"
+        },
+        "acptnc_scan_ts": {
+          "min_date": "2024-01-19 21:58:32",
+          "max_date": "2026-06-24 05:38:00"
+        },
+        "dlvrd_ts": {
+          "min_date": "2024-01-20 16:39:43",
+          "max_date": "2026-06-24 10:59:00"
+        },
+        "edd_dt": {
+          "min_date": "2024-06-19",
+          "max_date": "2027-04-21"
+        },
+        "buyer_cre_date": {
+          "min_date": "1980-01-01 00:00:00",
+          "max_date": "2026-06-22 23:59:30"
+        },
+        "claim_open_dt": {
+          "min_date": "2024-06-19",
+          "max_date": "2026-06-23"
+        },
+        "claim_close_dt": {
+          "min_date": "2024-06-19",
+          "max_date": "2026-06-23"
+        },
+        "dspt_open_dt": {
+          "min_date": "2024-06-19",
+          "max_date": "2026-06-23"
+        },
+        "dspt_close_dt": {
+          "min_date": "2024-06-19 07:39:20",
+          "max_date": "2026-06-23 05:59:18"
+        },
+        "update_dt": {
+          "min_date": "2026-06-24",
+          "max_date": "2026-06-24"
+        }
+      }
+    },
+    {
+      "table_name": "p_shally_t.his_pattern_seller_list",
+      "analysis_time": "2026-07-03 11:10:25",
+      "create_time": "Mon Jun 29 16:55:15 GMT-07:00 2026",
+      "row_count": 21535865,
+      "pk_distinct_count": null,
+      "column_count": 10,
+      "physical_size_bytes": 178339801,
+      "date_columns": [
+        "START_DATE",
+        "END_DATE",
+        "REPORT_DATE",
+        "UPDATE_DT"
+      ],
+      "date_ranges": {
+        "START_DATE": {
+          "min_date": "2020-09-18",
+          "max_date": "2026-06-23"
+        },
+        "END_DATE": {
+          "min_date": "2020-09-18",
+          "max_date": "2026-06-23"
+        },
+        "REPORT_DATE": {
+          "min_date": "2024-03-24",
+          "max_date": "2026-06-21"
+        },
+        "UPDATE_DT": {
+          "min_date": "2024-03-24",
+          "max_date": "2026-06-23"
+        }
+      }
+    },
+    {
+      "table_name": "p_shally_t.his_action_list",
+      "analysis_time": "2026-07-03 11:10:27",
+      "create_time": "Thu Jul 02 15:23:47 GMT-07:00 2026",
+      "row_count": 69212,
+      "pk_distinct_count": null,
+      "column_count": 9,
+      "physical_size_bytes": 1426818,
+      "date_columns": [
+        "action_date",
+        "report_date"
+      ],
+      "date_ranges": {
+        "action_date": {
+          "min_date": "2023-10-24",
+          "max_date": "2026-06-29"
+        },
+        "report_date": {
+          "min_date": "2023-10-08",
+          "max_date": "2026-06-28"
+        }
+      }
+    },
+    {
+      "table_name": "p_shally_t.linkage_icbt_comb_list",
+      "analysis_time": "2026-07-03 11:10:40",
+      "create_time": "Mon Jun 29 17:20:10 GMT-07:00 2026",
+      "row_count": 12416072590,
+      "pk_distinct_count": null,
+      "column_count": 6,
+      "physical_size_bytes": 141186998268,
+      "date_columns": [
+        "update_dt"
+      ],
+      "date_ranges": {
+        "update_dt": {
+          "min_date": "2026-06-21",
+          "max_date": "2026-06-21"
+        }
+      }
+    },
+    {
+      "table_name": "p_shally_t.icbt_trans_daily_detail",
+      "analysis_time": "2026-07-03 11:10:53",
+      "create_time": "Mon Dec 15 18:14:59 GMT-07:00 2025",
+      "row_count": 429488604,
+      "pk_distinct_count": null,
+      "column_count": 80,
+      "physical_size_bytes": 72989705441,
+      "date_columns": [
+        "trans_dt",
+        "first_pymt_dt",
+        "hndl_by_dt",
+        "trans_shipped_dt",
+        "frst_trking_uld_dt",
+        "trking_src_cre_dt",
+        "acptnc_scan_ts",
+        "dlvrd_ts",
+        "edd_dt",
+        "buyer_cre_date",
+        "claim_open_dt",
+        "claim_close_dt",
+        "dspt_open_dt",
+        "dspt_close_dt",
+        "GMV_DT",
+        "update_dt"
+      ],
+      "date_ranges": {
+        "trans_dt": {
+          "min_date": "2023-12-03",
+          "max_date": "2025-12-08"
+        },
+        "first_pymt_dt": {
+          "min_date": "2023-12-03",
+          "max_date": "2025-12-09"
+        },
+        "hndl_by_dt": {
+          "min_date": "2023-12-03",
+          "max_date": "2026-02-18"
+        },
+        "trans_shipped_dt": {
+          "min_date": "1969-12-31",
+          "max_date": "2025-12-09"
+        },
+        "frst_trking_uld_dt": {
+          "min_date": "2023-08-01",
+          "max_date": "2025-12-08"
+        },
+        "trking_src_cre_dt": {
+          "min_date": "2023-08-08",
+          "max_date": "2025-12-08"
+        },
+        "acptnc_scan_ts": {
+          "min_date": "2023-08-02 14:30:32",
+          "max_date": "2025-12-10 19:01:00"
+        },
+        "dlvrd_ts": {
+          "min_date": "2023-09-05 09:50:00",
+          "max_date": "2025-12-10 14:36:08"
+        },
+        "edd_dt": {
+          "min_date": "2023-12-03",
+          "max_date": "2026-06-04"
+        },
+        "buyer_cre_date": {
+          "min_date": "1980-01-01 00:00:00",
+          "max_date": "2025-12-08 23:59:44"
+        },
+        "claim_open_dt": {
+          "min_date": "2023-12-03",
+          "max_date": "2025-12-09"
+        },
+        "claim_close_dt": {
+          "min_date": "2023-12-03",
+          "max_date": "2025-12-09"
+        },
+        "dspt_open_dt": {
+          "min_date": "2023-12-03",
+          "max_date": "2025-12-09"
+        },
+        "dspt_close_dt": {
+          "min_date": "2023-12-04 06:18:01",
+          "max_date": "2025-12-09 04:32:31"
+        },
+        "GMV_DT": {
+          "min_date": "2023-12-03",
+          "max_date": "2025-12-09"
+        },
+        "update_dt": {
+          "min_date": "2025-12-10",
+          "max_date": "2025-12-10"
+        }
+      }
+    },
+    {
+      "table_name": "p_shally_t.cn_related_consolidated",
+      "analysis_time": "2026-07-03 11:10:55",
+      "create_time": "Mon Jun 29 16:53:12 GMT-07:00 2026",
+      "row_count": 113687529,
+      "pk_distinct_count": null,
+      "column_count": 24,
+      "physical_size_bytes": 687154172,
+      "date_columns": [
+        "update_dt"
+      ],
+      "date_ranges": {
+        "update_dt": {
+          "min_date": "2026-06-21",
+          "max_date": "2026-06-21"
+        }
+      }
+    },
+    {
+      "table_name": "p_shally_t.cn_related_slr_list",
+      "analysis_time": "2026-07-03 11:10:58",
+      "create_time": "Thu Jul 02 09:19:38 GMT-07:00 2026",
+      "row_count": 162389,
+      "pk_distinct_count": 162389,
+      "column_count": 18,
+      "physical_size_bytes": 2333061,
+      "date_columns": [
+        "ovrl_confidence_level_dtl",
+        "ovrl_action_dt",
+        "id_fraud_confidence_dtl",
+        "bmo_confidence_dtl",
+        "cac_confidence_dtl"
+      ],
+      "date_ranges": {
+        "ovrl_confidence_level_dtl": {
+          "min_date": "Arbitrage: BU Confirmed",
+          "max_date": "Linked to GC accounts, CN carrier adoption, Chinese bank etc."
+        },
+        "ovrl_action_dt": {
+          "min_date": "1969-12-31",
+          "max_date": "2026-06-01"
+        },
+        "id_fraud_confidence_dtl": {
+          "min_date": "Linked to GC accounts, CN carrier adoption, Chinese bank etc.",
+          "max_date": "N"
+        },
+        "bmo_confidence_dtl": {
+          "min_date": "BLANK",
+          "max_date": "N"
+        },
+        "cac_confidence_dtl": {
+          "min_date": "Arbitrage: BU Confirmed",
+          "max_date": "N"
+        }
+      }
+    },
+    {
+      "table_name": "p_shally_t.cn_related_slr_list_hist",
+      "analysis_time": "2026-07-03 11:11:03",
+      "create_time": "Thu Jul 02 09:18:28 GMT-07:00 2026",
+      "row_count": 1763719,
+      "pk_distinct_count": 1763719,
+      "column_count": 19,
+      "physical_size_bytes": 24965449,
+      "date_columns": [
+        "ovrl_confidence_level_dtl",
+        "ovrl_action_dt",
+        "id_fraud_confidence_dtl",
+        "bmo_confidence_dtl",
+        "cac_confidence_dtl",
+        "report_dt"
+      ],
+      "date_ranges": {
+        "ovrl_confidence_level_dtl": {
+          "min_date": "Arbitrage: BU Confirmed",
+          "max_date": "Linked to GC accounts, CN carrier adoption, Chinese bank etc."
+        },
+        "ovrl_action_dt": {
+          "min_date": "1969-12-31",
+          "max_date": "2026-06-01"
+        },
+        "id_fraud_confidence_dtl": {
+          "min_date": "Linked to GC accounts, CN carrier adoption, Chinese bank etc.",
+          "max_date": "N"
+        },
+        "bmo_confidence_dtl": {
+          "min_date": "BLANK",
+          "max_date": "N"
+        },
+        "cac_confidence_dtl": {
+          "min_date": "Arbitrage: BU Confirmed",
+          "max_date": "N"
+        },
+        "report_dt": {
+          "min_date": "2025-08-15",
+          "max_date": "2026-06-05"
+        }
+      }
+    },
+    {
+      "table_name": "P_SHALLY_T.ICBT_BL_INFO",
+      "analysis_time": "2026-07-03 11:11:07",
+      "create_time": "Thu Jun 25 02:11:31 GMT-07:00 2026",
+      "row_count": 1523038,
+      "pk_distinct_count": 1523038,
+      "column_count": 6,
+      "physical_size_bytes": 58776468,
+      "date_columns": [
+        "SRC_CRE_DT",
+        "LST_MDFD_DT"
+      ],
+      "date_ranges": {
+        "SRC_CRE_DT": {
+          "min_date": "2020-04-23 02:30:57",
+          "max_date": "2026-06-20 23:58:12"
+        },
+        "LST_MDFD_DT": {
+          "min_date": "2021-07-05 03:31:34",
+          "max_date": "2026-06-21 02:04:41"
+        }
+      }
+    },
+    {
+      "table_name": "p_shally_reg_t.fia_slr_lvl_recerts",
+      "analysis_time": "2026-07-03 11:11:10",
+      "create_time": "Thu Jul 02 06:07:01 GMT-07:00 2026",
+      "row_count": 41999,
+      "pk_distinct_count": null,
+      "column_count": 16,
+      "physical_size_bytes": 977905,
+      "date_columns": [
+        "LAST_RECERTIFICATION_DATE",
+        "REQUEST_DATE",
+        "TIME_SINCE_CERTIFICATION"
+      ],
+      "date_ranges": {
+        "LAST_RECERTIFICATION_DATE": {
+          "min_date": "2022-08-16 22:46:03",
+          "max_date": "2026-06-29 10:08:59"
+        },
+        "REQUEST_DATE": {
+          "min_date": "2024-06-28",
+          "max_date": "2026-06-26"
+        },
+        "TIME_SINCE_CERTIFICATION": {
+          "min_date": "1. < 4 MONTHS",
+          "max_date": "5. > 12 MONTHS"
+        }
+      }
+    },
+    {
+      "table_name": "p_shally_reg_t.fia_sellers_vrfcn",
+      "analysis_time": "2026-07-03 11:11:12",
+      "create_time": "Thu Jul 02 06:09:27 GMT-07:00 2026",
+      "row_count": 72144,
+      "pk_distinct_count": null,
+      "column_count": 75,
+      "physical_size_bytes": 5491240,
+      "date_columns": [
+        "actn_due_date",
+        "last_mdfd_dt",
+        "cre_date",
+        "upd_date",
+        "updated_by",
+        "src_cre_dt",
+        "Identity_State_dt",
+        "PhotoID_State_dt",
+        "contact_state_dt",
+        "verification_date",
+        "payout_block_dt",
+        "crtn_ts",
+        "payout_block_dt_v1",
+        "payout_block_date_v2",
+        "kyc_refresh_start_date",
+        "kyc_refresh_last_modified_date",
+        "TIME_UNDER_PROCESS_DAYS",
+        "TIME_UNDER_PROCESS_BUCKET",
+        "LAST_SALE_DT"
+      ],
+      "date_ranges": {
+        "actn_due_date": {
+          "min_date": "2022-12-12 00:00:00",
+          "max_date": "2026-07-22 00:00:00"
+        },
+        "last_mdfd_dt": {
+          "min_date": "2022-08-16 22:46:03",
+          "max_date": "2026-06-30 13:55:08"
+        },
+        "cre_date": {
+          "min_date": "2022-08-16",
+          "max_date": "2026-06-30"
+        },
+        "upd_date": {
+          "min_date": "2022-12-09 00:30:49.313000",
+          "max_date": "2026-06-30 18:07:21.816150"
+        },
+        "updated_by": {
+          "min_date": "CMPL_EXECUTION_UPDATE",
+          "max_date": "iarora|ONBAML-38179"
+        },
+        "src_cre_dt": {
+          "min_date": "2022-08-16 09:45:25",
+          "max_date": "2026-06-30 13:55:08"
+        },
+        "Identity_State_dt": {
+          "min_date": "2022-10-12 18:43:42",
+          "max_date": "2026-06-30 04:36:48"
+        },
+        "PhotoID_State_dt": {
+          "min_date": "2022-09-14 13:38:06",
+          "max_date": "2026-06-29 23:10:15"
+        },
+        "contact_state_dt": {
+          "min_date": "2022-08-16 09:45:25",
+          "max_date": "2026-06-30 11:29:13"
+        },
+        "verification_date": {
+          "min_date": "2022-08-16 09:45:25",
+          "max_date": "2026-06-30 11:29:13"
+        },
+        "payout_block_dt": {
+          "min_date": "2023-05-15 21:44:28",
+          "max_date": "2026-06-29 23:57:44"
+        },
+        "crtn_ts": {
+          "min_date": "2023-05-15 21:44:27",
+          "max_date": "2026-06-29 23:57:43"
+        },
+        "payout_block_dt_v1": {
+          "min_date": "2023-05-15 21:44:28",
+          "max_date": "2026-06-29 23:57:44"
+        },
+        "payout_block_date_v2": {
+          "min_date": "2023-05-15 21:44:28",
+          "max_date": "2026-06-29 23:57:44"
+        },
+        "kyc_refresh_start_date": {
+          "min_date": "2022-08-16",
+          "max_date": "2026-06-30"
+        },
+        "kyc_refresh_last_modified_date": {
+          "min_date": "2022-08-16",
+          "max_date": "2026-06-30"
+        },
+        "TIME_UNDER_PROCESS_DAYS": {
+          "min_date": "N/A",
+          "max_date": "1413"
+        },
+        "TIME_UNDER_PROCESS_BUCKET": {
+          "min_date": "0-7d",
+          "max_date": ">90d"
+        },
+        "LAST_SALE_DT": {
+          "min_date": "2022-10-09",
+          "max_date": "2026-06-29"
+        }
+      }
+    },
+    {
+      "table_name": "P_apac_bm_t.sc_cnw_sellers_list",
+      "analysis_time": "2026-07-03 11:11:15",
+      "create_time": "Wed Jul 01 22:02:31 GMT-07:00 2026",
+      "row_count": 366840,
+      "pk_distinct_count": 366826,
+      "column_count": 28,
+      "physical_size_bytes": 17108830,
+      "date_columns": [
+        "snpsht_dt",
+        "declare_date"
+      ],
+      "date_ranges": {
+        "snpsht_dt": {
+          "min_date": "2026-06-30",
+          "max_date": "2026-06-30"
+        },
+        "declare_date": {
+          "min_date": "2023-05-05",
+          "max_date": "2099-12-31"
+        }
+      }
+    },
+    {
+      "table_name": "P_apac_bm_t.OPENQTY_DAILY",
+      "analysis_time": "2026-07-03 11:11:18",
+      "create_time": "Wed Jul 01 22:09:15 GMT-07:00 2026",
+      "row_count": 2783537641,
+      "pk_distinct_count": null,
+      "column_count": 16,
+      "physical_size_bytes": 52732962068,
+      "date_columns": [
+        "BEG_DT",
+        "Run_DT"
+      ],
+      "date_ranges": {
+        "BEG_DT": {
+          "min_date": "2010-11-24",
+          "max_date": "2026-06-30"
+        },
+        "Run_DT": {
+          "min_date": "2019-05-17",
+          "max_date": "2026-07-01"
+        }
+      }
+    }
+  ]
+}

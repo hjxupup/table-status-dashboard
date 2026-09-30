@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Table Status Dashboard</title>
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+  <body>
+    <div id="refresh-overlay" class="refresh-overlay" style="display:none;">
+      <div class="overlay-content">
+        <div class="overlay-title">正在刷新数据库中</div>
+        <div class="overlay-sub">已刷新 <span id="overlay-seconds">0</span> 秒，请稍后…</div>
+      </div>
+    </div>
+    <div class="container">
+      <header class="topbar">
+        <h1>Table Status Dashboard</h1>
+        <div class="top-actions">
+          <div class="last-refresh">信息读取时间: <span id="last-refresh">{{ last_refresh if last_refresh else 'None' }}</span></div>
+          <button id="update-all-cache" class="btn btn-update-cache">更新所有缓存</button>
+          <button id="reanalyze-all" class="btn btn-reanalyze">重新分析所有</button>
+        </div>
+      </header>
+      {% if mode == 'snapshot' %}
+      <div class="demo-notice" role="status">历史快照展示 · 未连接生产 Hive · 数据采集时间保留原值 <span id="demo-action-notice"></span></div>
+      {% endif %}
+
+      <main>
+        <div id="tables" class="grid">
+          {% for t in tables %}
+          <div class="table-card" id="card-{{ t }}" data-table="{{ t }}">
+            <div class="card-header"><h2>{{ t }}</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('{{ t }}')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('{{ t }}')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </main>
+    </div>
+
+    <script src="static/app.js"></script>
+  </body>
+</html>

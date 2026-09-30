@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Table Status Dashboard</title>
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+  <body>
+    <div id="refresh-overlay" class="refresh-overlay" style="display:none;">
+      <div class="overlay-content">
+        <div class="overlay-title">正在刷新数据库中</div>
+        <div class="overlay-sub">已刷新 <span id="overlay-seconds">0</span> 秒，请稍后…</div>
+      </div>
+    </div>
+    <div class="container">
+      <header class="topbar">
+        <h1>Table Status Dashboard</h1>
+        <div class="top-actions">
+          <div class="last-refresh">信息读取时间: <span id="last-refresh">2026-07-03 11:49:09</span></div>
+          <button id="update-all-cache" class="btn btn-update-cache">更新所有缓存</button>
+          <button id="reanalyze-all" class="btn btn-reanalyze">重新分析所有</button>
+        </div>
+      </header>
+      
+      <div class="demo-notice" role="status">历史快照展示 · 未连接生产 Hive · 数据采集时间保留原值 <span id="demo-action-notice"></span></div>
+      
+
+      <main>
+        <div id="tables" class="grid">
+          
+          <div class="table-card" id="card-P_CBT_BMO_T.USER_ISSUE_HISTORY" data-table="P_CBT_BMO_T.USER_ISSUE_HISTORY">
+            <div class="card-header"><h2>P_CBT_BMO_T.USER_ISSUE_HISTORY</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('P_CBT_BMO_T.USER_ISSUE_HISTORY')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('P_CBT_BMO_T.USER_ISSUE_HISTORY')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-P_CBT_BMO_T.USER_STATE_HISTORY" data-table="P_CBT_BMO_T.USER_STATE_HISTORY">
+            <div class="card-header"><h2>P_CBT_BMO_T.USER_STATE_HISTORY</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('P_CBT_BMO_T.USER_STATE_HISTORY')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('P_CBT_BMO_T.USER_STATE_HISTORY')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-P_KYRENELIU_T.TRANS_BASE" data-table="P_KYRENELIU_T.TRANS_BASE">
+            <div class="card-header"><h2>P_KYRENELIU_T.TRANS_BASE</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('P_KYRENELIU_T.TRANS_BASE')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('P_KYRENELIU_T.TRANS_BASE')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-P_CBT_BMO_T.Shipping_Trans_Base" data-table="P_CBT_BMO_T.Shipping_Trans_Base">
+            <div class="card-header"><h2>P_CBT_BMO_T.Shipping_Trans_Base</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('P_CBT_BMO_T.Shipping_Trans_Base')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('P_CBT_BMO_T.Shipping_Trans_Base')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-P_BM_Shipping_T.BM_BBE_TRX_NEW_2021" data-table="P_BM_Shipping_T.BM_BBE_TRX_NEW_2021">
+            <div class="card-header"><h2>P_BM_Shipping_T.BM_BBE_TRX_NEW_2021</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('P_BM_Shipping_T.BM_BBE_TRX_NEW_2021')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('P_BM_Shipping_T.BM_BBE_TRX_NEW_2021')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-P_APAC_SUPRO_T.PROTECTION_BASE" data-table="P_APAC_SUPRO_T.PROTECTION_BASE">
+            <div class="card-header"><h2>P_APAC_SUPRO_T.PROTECTION_BASE</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('P_APAC_SUPRO_T.PROTECTION_BASE')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('P_APAC_SUPRO_T.PROTECTION_BASE')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-P_KYRENE3_T.USER_BASE" data-table="P_KYRENE3_T.USER_BASE">
+            <div class="card-header"><h2>P_KYRENE3_T.USER_BASE</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('P_KYRENE3_T.USER_BASE')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('P_KYRENE3_T.USER_BASE')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-P_KYRENE3_T.LISTING_BASE" data-table="P_KYRENE3_T.LISTING_BASE">
+            <div class="card-header"><h2>P_KYRENE3_T.LISTING_BASE</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('P_KYRENE3_T.LISTING_BASE')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('P_KYRENE3_T.LISTING_BASE')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-P_KYRENE3_T.MACNOTE_BASE" data-table="P_KYRENE3_T.MACNOTE_BASE">
+            <div class="card-header"><h2>P_KYRENE3_T.MACNOTE_BASE</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('P_KYRENE3_T.MACNOTE_BASE')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('P_KYRENE3_T.MACNOTE_BASE')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-P_XINYE_T.RETURN_BASE" data-table="P_XINYE_T.RETURN_BASE">
+            <div class="card-header"><h2>P_XINYE_T.RETURN_BASE</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('P_XINYE_T.RETURN_BASE')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('P_XINYE_T.RETURN_BASE')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_lliu20_t.icbt_trans_flag" data-table="p_lliu20_t.icbt_trans_flag">
+            <div class="card-header"><h2>p_lliu20_t.icbt_trans_flag</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_lliu20_t.icbt_trans_flag')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_lliu20_t.icbt_trans_flag')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_lliu20_t.icbt_seller_flag" data-table="p_lliu20_t.icbt_seller_flag">
+            <div class="card-header"><h2>p_lliu20_t.icbt_seller_flag</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_lliu20_t.icbt_seller_flag')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_lliu20_t.icbt_seller_flag')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_lliu20_t.GC_large_loss_link" data-table="p_lliu20_t.GC_large_loss_link">
+            <div class="card-header"><h2>p_lliu20_t.GC_large_loss_link</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_lliu20_t.GC_large_loss_link')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_lliu20_t.GC_large_loss_link')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_lliu20_t.XID_GC" data-table="p_lliu20_t.XID_GC">
+            <div class="card-header"><h2>p_lliu20_t.XID_GC</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_lliu20_t.XID_GC')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_lliu20_t.XID_GC')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_lliu20_t.XID_link_prblty_GC" data-table="p_lliu20_t.XID_link_prblty_GC">
+            <div class="card-header"><h2>p_lliu20_t.XID_link_prblty_GC</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_lliu20_t.XID_link_prblty_GC')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_lliu20_t.XID_link_prblty_GC')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_lliu20_t.DSA_prci_item_report_seller" data-table="p_lliu20_t.DSA_prci_item_report_seller">
+            <div class="card-header"><h2>p_lliu20_t.DSA_prci_item_report_seller</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_lliu20_t.DSA_prci_item_report_seller')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_lliu20_t.DSA_prci_item_report_seller')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_lliu20_t.prci_suspend_restrict" data-table="p_lliu20_t.prci_suspend_restrict">
+            <div class="card-header"><h2>p_lliu20_t.prci_suspend_restrict</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_lliu20_t.prci_suspend_restrict')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_lliu20_t.prci_suspend_restrict')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-P_LLIU20_T.TRO_yrly_rpt_raw" data-table="P_LLIU20_T.TRO_yrly_rpt_raw">
+            <div class="card-header"><h2>P_LLIU20_T.TRO_yrly_rpt_raw</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('P_LLIU20_T.TRO_yrly_rpt_raw')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('P_LLIU20_T.TRO_yrly_rpt_raw')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_shally_t.icbt_acct_info" data-table="p_shally_t.icbt_acct_info">
+            <div class="card-header"><h2>p_shally_t.icbt_acct_info</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_shally_t.icbt_acct_info')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_shally_t.icbt_acct_info')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_shally_t.gpsr_in_scope_listing" data-table="p_shally_t.gpsr_in_scope_listing">
+            <div class="card-header"><h2>p_shally_t.gpsr_in_scope_listing</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_shally_t.gpsr_in_scope_listing')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_shally_t.gpsr_in_scope_listing')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_shally_reg_t.weee_in_scope_listing" data-table="p_shally_reg_t.weee_in_scope_listing">
+            <div class="card-header"><h2>p_shally_reg_t.weee_in_scope_listing</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_shally_reg_t.weee_in_scope_listing')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_shally_reg_t.weee_in_scope_listing')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_shally_t.ce_audit_tracking" data-table="p_shally_t.ce_audit_tracking">
+            <div class="card-header"><h2>p_shally_t.ce_audit_tracking</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_shally_t.ce_audit_tracking')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_shally_t.ce_audit_tracking')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_shally_t.neg_bal_acct_age" data-table="p_shally_t.neg_bal_acct_age">
+            <div class="card-header"><h2>p_shally_t.neg_bal_acct_age</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_shally_t.neg_bal_acct_age')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_shally_t.neg_bal_acct_age')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_shally_t.icbt_largeloss_acct_daily" data-table="p_shally_t.icbt_largeloss_acct_daily">
+            <div class="card-header"><h2>p_shally_t.icbt_largeloss_acct_daily</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_shally_t.icbt_largeloss_acct_daily')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_shally_t.icbt_largeloss_acct_daily')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_shally_reg_t.epr_de_in_scope_listing" data-table="p_shally_reg_t.epr_de_in_scope_listing">
+            <div class="card-header"><h2>p_shally_reg_t.epr_de_in_scope_listing</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_shally_reg_t.epr_de_in_scope_listing')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_shally_reg_t.epr_de_in_scope_listing')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_jp_bmo_t.jp_ag_elb_item" data-table="p_jp_bmo_t.jp_ag_elb_item">
+            <div class="card-header"><h2>p_jp_bmo_t.jp_ag_elb_item</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_jp_bmo_t.jp_ag_elb_item')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_jp_bmo_t.jp_ag_elb_item')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_shally_reg_t.global_trans_daily_detail" data-table="p_shally_reg_t.global_trans_daily_detail">
+            <div class="card-header"><h2>p_shally_reg_t.global_trans_daily_detail</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_shally_reg_t.global_trans_daily_detail')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_shally_reg_t.global_trans_daily_detail')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_shally_t.his_pattern_seller_list" data-table="p_shally_t.his_pattern_seller_list">
+            <div class="card-header"><h2>p_shally_t.his_pattern_seller_list</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_shally_t.his_pattern_seller_list')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_shally_t.his_pattern_seller_list')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_shally_t.his_action_list" data-table="p_shally_t.his_action_list">
+            <div class="card-header"><h2>p_shally_t.his_action_list</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_shally_t.his_action_list')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_shally_t.his_action_list')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_shally_t.linkage_icbt_comb_list" data-table="p_shally_t.linkage_icbt_comb_list">
+            <div class="card-header"><h2>p_shally_t.linkage_icbt_comb_list</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_shally_t.linkage_icbt_comb_list')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_shally_t.linkage_icbt_comb_list')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_shally_t.icbt_trans_daily_detail" data-table="p_shally_t.icbt_trans_daily_detail">
+            <div class="card-header"><h2>p_shally_t.icbt_trans_daily_detail</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_shally_t.icbt_trans_daily_detail')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_shally_t.icbt_trans_daily_detail')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_shally_t.cn_related_consolidated" data-table="p_shally_t.cn_related_consolidated">
+            <div class="card-header"><h2>p_shally_t.cn_related_consolidated</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_shally_t.cn_related_consolidated')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_shally_t.cn_related_consolidated')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_shally_t.cn_related_slr_list" data-table="p_shally_t.cn_related_slr_list">
+            <div class="card-header"><h2>p_shally_t.cn_related_slr_list</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_shally_t.cn_related_slr_list')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_shally_t.cn_related_slr_list')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_shally_t.cn_related_slr_list_hist" data-table="p_shally_t.cn_related_slr_list_hist">
+            <div class="card-header"><h2>p_shally_t.cn_related_slr_list_hist</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_shally_t.cn_related_slr_list_hist')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_shally_t.cn_related_slr_list_hist')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-P_SHALLY_T.ICBT_BL_INFO" data-table="P_SHALLY_T.ICBT_BL_INFO">
+            <div class="card-header"><h2>P_SHALLY_T.ICBT_BL_INFO</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('P_SHALLY_T.ICBT_BL_INFO')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('P_SHALLY_T.ICBT_BL_INFO')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_shally_reg_t.fia_slr_lvl_recerts" data-table="p_shally_reg_t.fia_slr_lvl_recerts">
+            <div class="card-header"><h2>p_shally_reg_t.fia_slr_lvl_recerts</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_shally_reg_t.fia_slr_lvl_recerts')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_shally_reg_t.fia_slr_lvl_recerts')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-p_shally_reg_t.fia_sellers_vrfcn" data-table="p_shally_reg_t.fia_sellers_vrfcn">
+            <div class="card-header"><h2>p_shally_reg_t.fia_sellers_vrfcn</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('p_shally_reg_t.fia_sellers_vrfcn')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('p_shally_reg_t.fia_sellers_vrfcn')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-P_apac_bm_t.sc_cnw_sellers_list" data-table="P_apac_bm_t.sc_cnw_sellers_list">
+            <div class="card-header"><h2>P_apac_bm_t.sc_cnw_sellers_list</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('P_apac_bm_t.sc_cnw_sellers_list')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('P_apac_bm_t.sc_cnw_sellers_list')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+          <div class="table-card" id="card-P_apac_bm_t.OPENQTY_DAILY" data-table="P_apac_bm_t.OPENQTY_DAILY">
+            <div class="card-header"><h2>P_apac_bm_t.OPENQTY_DAILY</h2></div>
+            <div class="card-actions">
+              <button class="btn small btn-update-cache" onclick="refreshCard('P_apac_bm_t.OPENQTY_DAILY')">更新缓存</button>
+            </div>
+            <div class="card-actions">
+              <button class="btn small btn-reanalyze" onclick="refreshAnalyze('P_apac_bm_t.OPENQTY_DAILY')">重新分析</button>
+            </div>
+
+            <div class="card-body">
+              <div class="meta"><span class="label">分析时间:</span> <span class="value" data-key="analysis_time">Loading...</span></div>
+              <div class="meta"><span class="label">最后刷新:</span> <span class="value" data-key="create_time">-</span></div>
+              <div class="meta"><span class="label">行数:</span> <span class="value number" data-key="row_count">-</span></div>
+              <div class="meta"><span class="label">count(distinct PK):</span> <span class="value number" data-key="pk_distinct_count">-</span></div>
+              <div class="meta"><span class="label">列数:</span> <span class="value" data-key="column_count">-</span></div>
+              <div class="meta"><span class="label">物理大小:</span> <span class="value" data-key="physical_size_gb">-</span> GB</div>
+
+              <div class="meta time-col">
+                <span class="label">时间列:</span>
+                <select data-key="time_select" onchange="onTimeColumnChange(this.closest('.table-card').dataset.table, this.value)"><option value="">-- 选择时间列 --</option></select>
+                <button class="icon-btn" data-key="fav_toggle" title="收藏/取消" onclick="toggleFavoriteSelect(this.closest('.table-card').dataset.table)"><span class="star">☆</span></button>
+              </div>
+              <div class="meta"><span class="label">当前跨度:</span> <span class="value" data-key="current_span">-</span></div>
+              <div class="favorites" data-key="favorites"></div>
+            </div>
+          </div>
+          
+        </div>
+      </main>
+    </div>
+
+    <script src="static/demo-api.js"></script>
+    <script src="static/app.js"></script>
+  </body>
+</html>

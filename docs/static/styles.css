@@ -1,0 +1,66 @@
+body { font-family: Inter, Roboto, system-ui, Arial, sans-serif; background: linear-gradient(180deg,#f3f6fb, #eef3fa); color: #1f2937; margin:0 }
+.container { max-width: 1100px; margin: 28px auto; padding: 18px; background: #ffffff; border-radius: 12px; box-shadow: 0 6px 30px rgba(31,41,55,0.06) }
+.topbar { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px }
+.topbar h1 { margin:0; font-size:20px }
+.top-actions { display:flex; align-items:center; gap:12px }
+.btn { background:#2563eb; color:#fff; border:none; padding:8px 12px; border-radius:8px; cursor:pointer; font-size:13px }
+.btn.small { padding:6px 8px; font-size:12px }
+.btn:active { transform:translateY(1px) }
+/* 轻绿色更新缓存按钮 */
+.btn-update-cache { background:#c9f4c9; color:#145214; }
+.btn-update-cache:hover { background:#b2ecb2; }
+.btn-update-cache:active { background:#a2e3a2; }
+/* 淡蓝色重新分析按钮 */
+.btn-reanalyze { background:#bfdbfe; color:#1e3a8a; }
+.btn-reanalyze:hover { background:#93c5fd; }
+.btn-reanalyze:active { background:#60a5fa; }
+
+.grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap:14px }
+.table-card { background: linear-gradient(180deg,#ffffff,#fbfdff); border:1px solid #e6eefb; padding:12px; border-radius:10px; box-shadow: 0 4px 12px rgba(37,99,235,0.03) }
+.card-header { display:block; margin-bottom:4px }
+.card-header h2 { margin:0 0 6px 0; font-size:15px; word-break:break-all }
+.card-actions { margin-bottom:4px; }
+.card-actions .btn { width:100%; }
+.card-body { display:flex; flex-direction:column; gap:6px }
+.meta { display:flex; gap:8px; align-items:center; font-size:13px }
+.meta .label { color:#6b7280; min-width:84px }
+.meta .value { color:#111827 }
+.number { font-weight:600 }
+.time-col select { padding:6px; border-radius:6px; border:1px solid #e6eefb; background:#fff }
+.time-col { flex-wrap:wrap; }
+.time-col select { flex:1 1 160px; min-width:160px; }
+.time-col .btn { flex:0 0 auto; }
+.time-col .label { flex:0 0 auto; }
+
+/* Fix potential overflow causing buttons to drop awkwardly */
+.table-card { overflow:hidden; }
+
+/* Optional favorites styling (prevents layout jump) */
+.favorites { display:flex; flex-wrap:wrap; gap:4px; margin-top:2px; }
+.fav-row { display:flex; align-items:center; gap:8px; width:100%; font-size:12px; background:#f8fafc; border:1px solid #e6eefb; padding:4px 6px; border-radius:6px; }
+.fav-row .fav-col { font-weight:600; color:#0f172a; }
+.fav-row .fav-span { color:#334155; flex:1; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+.icon-btn { background:transparent; border:none; cursor:pointer; padding:4px; display:inline-flex; align-items:center; justify-content:center; border-radius:6px; }
+.icon-btn:hover { background:#e0f2fe; }
+.star { font-size:16px; line-height:1; color:#64748b; }
+.star.filled { color:#f59e0b; }
+.date-ranges { margin-top:8px; font-size:13px; color:#374151 }
+.date-ranges .placeholder { color:#9ca3af }
+
+.spinner { width:18px; height:18px; border:3px solid #e6eefb; border-top-color:#2563eb; border-radius:50%; animation:spin 1s linear infinite; display:inline-block }
+@keyframes spin { to { transform:rotate(360deg) } }
+
+/* responsive tweaks */
+@media (max-width:600px){ .container{margin:12px;padding:12px} .meta .label{min-width:72px} }
+
+/* Small source notice; the original card layout and colors are retained. */
+.demo-notice { margin:0 0 12px; padding:8px 10px; border:1px solid #e6eefb; border-radius:6px; background:#f8fafc; color:#64748b; font-size:12px; line-height:1.6; }
+.btn:disabled { opacity:.65; cursor:wait; }
+.meta .value { overflow-wrap:anywhere; min-width:0; }
+.refresh-overlay { position:fixed; inset:0; z-index:100; background:rgba(241,245,249,.88); align-items:center; justify-content:center; }
+.overlay-content { padding:28px; border-radius:12px; background:white; box-shadow:0 8px 40px rgba(31,41,55,.1); }
+.overlay-title { font-size:18px; margin-bottom:10px; }
+.overlay-sub { font-size:13px; color:#64748b; }
+@media (max-width:760px){ .topbar{align-items:flex-start;flex-direction:column} .top-actions{flex-wrap:wrap} }
+@media (max-width:380px){ .grid{grid-template-columns:minmax(0,1fr)} }
