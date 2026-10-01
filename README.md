@@ -2,41 +2,81 @@
 
 **[Live Demo — Open the Dashboard](https://hjxupup.github.io/table-status-dashboard/)**
 
-Once published, the GitHub Pages demo is public and requires no sign-in, installation, or local deployment.
+The demo is hosted on GitHub Pages and can be opened without signing in or installing anything.
 
-A reproduction of the original Python / Flask / SQLAlchemy table-metadata dashboard. It retains the original card grid, Chinese field labels, green cache buttons, blue analysis buttons, time-column dropdowns, and star favorites.
+A web dashboard for inspecting Hive table metadata, developed from a table-monitoring project during an eBay internship. It brings table size, row counts, primary-key distinct counts, and time-column ranges into one interface so analysts can review the state of their data before using it in downstream analysis.
 
-This GitHub-ready bundle preserves the dashboard's visible historical metrics, table headings, time-column labels and timestamps. It includes the Flask backend, a prebuilt `docs/` website, and a self-contained `Table_Status_Dashboard.html` preview.
+The public demo displays real historical metadata snapshots for **39 tables**, with their recorded metrics and timestamps. The repository includes the Python backend, an interactive frontend, and a static version for browser access.
 
-**[GitHub upload and Pages instructions](GITHUB_UPLOAD.md)**: extract this bundle and upload its contents to your repository. The website is already built.
+## Project Background
 
-## What the project solves
+When analysis depends on many warehouse tables, checking each table separately can involve repeated SQL queries and manual comparisons. Questions such as “How many records are available?”, “Does the distinct-key count match the row count?”, and “What time period does this column cover?” are easy to overlook when the answers are scattered across different tools.
 
-Downstream analysis depends on understanding whether source tables have usable and consistent metadata. This dashboard centralizes table-analysis timestamps, row counts, distinct primary-key counts, column counts, physical sizes, and minimum/maximum values of time columns. Operators can inspect many tables in one page instead of repeatedly running separate Hive queries.
+This project centralizes those checks in a card-based dashboard. It gives analysts a consistent view of table metadata and makes changes in data volume, key counts, and time coverage easier to inspect. The goal is to support informed data-quality checks before further analysis.
 
-This distribution includes one historical display snapshot for each of the 39 dashboard cards. Only fields used by the webpage are included. The table headings, time-column labels, metrics and timestamps shown on the webpage remain accessible to visitors; this package protects internal connections and non-display source metadata. See [PRIVACY.md](PRIVACY.md) for the exact boundary.
+## Key Features
 
-## Original application and reproduction changes
+- **Table overview:** view row counts, distinct primary-key counts, column counts, physical storage size, and metadata-analysis timestamps across 39 tables.
+- **Time-range inspection:** select a time column and inspect its saved minimum and maximum values.
+- **Favorite columns:** save frequently used time columns, with a maximum of five favorites per table.
+- **Separate refresh actions:** reload saved metadata through cache controls, or request a new analysis when running with a configured live source.
+- **Scheduled collection:** in live mode, refresh table metadata hourly and retain snapshots for seven days by default.
+- **Monitoring API:** flag missing metadata, old analysis snapshots, and differences between row counts and distinct-key counts.
+- **Portable demonstration:** browse the project on GitHub Pages or run the Flask application locally using the supplied snapshots.
 
-The original application collected Hive/Kyuubi metadata over JDBC, stored snapshots through SQLAlchemy, refreshed hourly with APScheduler, and provided a Flask/Jinja interface with vanilla JavaScript. Its original monitoring workflow relied on the displayed metrics; the supplied source did not contain a downstream enforcement mechanism.
+## Technology Stack
 
-This reproduction adds an explicit `snapshot` mode, optional `/api/monitoring` flags, and a portable static export. It fixes the frontend bug where updating favorites or loading time spans erased existing card metrics. It also preserves the selected time column across cache refreshes, validates table/column requests, and fixes JDBC jar configuration so explicit driver paths work without a server-specific Kyuubi installation directory.
+| Layer | Technologies | Role |
+| --- | --- | --- |
+| Backend | Python, Flask | Application setup, metadata endpoints, refresh controls, and request validation |
+| Metadata storage | SQLAlchemy, SQLite | Store table snapshots, analysis timestamps, and favorite-column settings |
+| Warehouse access | Hive / Kyuubi JDBC, JayDeBeApi, JPype | Collect metadata from a configured warehouse in live mode |
+| Scheduling | APScheduler | Run periodic metadata collection and snapshot cleanup |
+| Frontend | Jinja2, HTML, CSS, vanilla JavaScript | Render table cards and handle time-column selection, favorites, and refresh actions |
+| Deployment | Docker, Gunicorn, GitHub Pages | Run the backend or publish the static demonstration |
+| Validation | pytest, Node.js test runner | Check API behavior, snapshot handling, browser adaptation, and public-field filtering |
 
-The original `最后刷新` field continues to display Hive's recorded **Created Time** to preserve the interface. Created Time is not a reliable substitute for a source table's actual data-refresh timestamp. The new monitoring API evaluates the age of the metadata analysis, not the age of every business record.
+## How It Works
 
-## Supported modes
+### Backend workflow
 
-| Mode | Data source | Reanalyze button | Favorites | Hive / Java needed |
-| --- | --- | --- | --- | --- |
-| Flask snapshot mode | Supplied historical snapshots | Reads the saved metadata again; does not change its analysis timestamp | Local SQLite | No |
-| Flask live mode | Configured Hive/Kyuubi JDBC connection | Runs metadata queries and saves a new snapshot | Local SQLite | Yes |
-| Hosted/static demo | Same archived snapshot export | Reads archived metadata in the browser | Each visitor's browser storage | No |
+1. **Collect:** the analyzer connects to a configured Hive/Kyuubi source through JDBC and retrieves table metadata, counts, and time-column ranges.
+2. **Store:** SQLAlchemy writes the results to SQLite as timestamped snapshots. Favorites are stored separately from metadata.
+3. **Serve:** Flask exposes the latest snapshots through JSON endpoints and renders the dashboard with Jinja2.
+4. **Inspect:** the frontend updates table cards, loads selected time ranges, and manages favorite columns.
 
-The hosted static demo is a faithful frontend reproduction. It does not run a Flask server, SQLAlchemy, or JDBC in the browser. The full Python backend is included separately in this repository.
+In live mode, APScheduler runs collection and cleanup jobs in the background. Manual reanalysis follows the same collection and storage workflow.
 
-## Run locally on Windows
+### Public demo workflow
 
-Requires Python 3.11 or newer. Open a terminal in this folder:
+The GitHub Pages site loads the archived display snapshots from JSON and uses a browser adapter to provide the dashboard interactions. Favorites are stored in each visitor's browser. The demo preserves the original collection timestamps when metadata is reloaded.
+
+GitHub Pages serves the static frontend. Running live warehouse queries requires the Flask backend and a separately configured JDBC connection.
+
+## Engineering Decisions
+
+- **Store metadata before displaying it.** Dashboard reads use saved snapshots, allowing users to inspect results without repeating expensive warehouse queries on every page load.
+- **Separate cached reads from analysis.** Refreshing the view and collecting new warehouse metadata are different operations with different costs.
+- **Preserve state during UI updates.** Changing a selected time column or updating favorites keeps the card's existing metrics visible.
+- **Validate tables and columns.** API requests are checked against the available configuration or snapshots, and favorite limits are enforced on the backend.
+- **Keep deployment modes explicit.** Snapshot mode provides a reproducible local demonstration; live mode uses environment-based connection configuration.
+- **Control public output.** Exported data and API responses include dashboard display fields, while internal connections and non-display source metadata are excluded from the public edition.
+
+## Available Modes
+
+| Mode | Data source | Refresh / reanalysis | Favorites |
+| --- | --- | --- | --- |
+| GitHub Pages demo | Archived JSON display snapshots | Reloads the saved metrics and keeps their historical timestamps | Visitor's browser storage |
+| Local Flask snapshot mode | Supplied snapshots imported into local SQLite | Reads the saved metadata again | Local SQLite |
+| Flask live mode | Configured Hive/Kyuubi connection | Runs queries and saves a new analysis snapshot | Local SQLite |
+
+**Timestamp semantics:** the UI label `最后刷新` displays the source table's recorded **Created Time** for compatibility with the original interface. The `分析时间` field records when metadata was analyzed. The monitoring API evaluates the age of that analysis snapshot; it does not establish the freshness of every underlying business record or automatically block downstream jobs.
+
+## Run Locally
+
+Python **3.11 or newer** is required. The default mode uses the supplied snapshots and needs no warehouse credentials, JDBC driver, or Java installation.
+
+### Windows
 
 ```powershell
 py -3.11 -m venv .venv
@@ -44,16 +84,7 @@ py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe run.py
 ```
 
-Open **http://127.0.0.1:8000**. No credentials are needed for the default snapshot mode. On the first run, the application creates `instance/metadata.db` and imports the 39 bundled snapshots. The original source database and its full history are excluded.
-
-With an existing Python environment:
-
-```powershell
-python -m pip install -r requirements.txt
-python run.py
-```
-
-## Run on macOS / Linux
+### macOS / Linux
 
 ```bash
 python3 -m venv .venv
@@ -61,31 +92,35 @@ python3 -m venv .venv
 .venv/bin/python run.py
 ```
 
-## Restore live Hive analysis
+Open **http://127.0.0.1:8000**. On first startup, the application creates `instance/metadata.db` from the supplied display snapshots.
 
-Install the optional JDBC dependencies, install a supported Java runtime and obtain the appropriate Hive/Kyuubi JDBC driver jars:
+For a browser-only local preview, open `Table_Status_Dashboard.html`. Browser settings may affect whether favorites persist when opening a local file.
+
+## Configure Live Mode
+
+Live mode requires access to your own warehouse, a compatible Java runtime, JDBC driver jars, and local table/key configuration.
+
+Install the optional dependencies and copy the configuration templates:
 
 ```powershell
 python -m pip install -r requirements-live.txt
 Copy-Item .env.example .env
+Copy-Item target_tables.txt.example target_tables.txt
+Copy-Item table_primary_keys.json.example table_primary_keys.json
 ```
 
-Edit `.env` with your own environment:
+On macOS / Linux, use `cp` for the three template copies. Edit the local files for your environment. A generic `.env` configuration is:
 
 ```dotenv
 DASHBOARD_MODE=live
 JDBC_URL=jdbc:hive2://your-hive-host:10000/default
 JDBC_DRIVER_CLASS=org.apache.kyuubi.jdbc.KyuubiHiveDriver
-JDBC_DRIVER_JAR_PATH=D:\drivers\kyuubi-hive-jdbc.jar
+JDBC_DRIVER_JAR_PATH=/path/to/kyuubi-hive-jdbc.jar
 HIVE_USERNAME=your_username
 HIVE_PASSWORD=your_password
 ```
 
-Multiple jar paths on Windows can be separated by `;`. If explicit jar paths are absent, the connector also checks `$KYUUBI_HOME/jars`. Actual live-source table and primary-key configuration is excluded. To enable live mode, copy `target_tables.txt.example` to `target_tables.txt` and `table_primary_keys.json.example` to `table_primary_keys.json`, and edit those private files in your own environment. Both filenames and `.env` are ignored by Git. Snapshot mode uses the display dataset and needs neither file.
-
-Then run `python run.py`. Live mode refreshes metadata once an hour and retains seven days of snapshots by default. Use one server worker when the in-process scheduler is enabled, so hourly jobs are not duplicated. Large tables require expensive `COUNT` and `MIN/MAX` queries; refreshing browser cache does not repeat those queries, while live reanalysis does.
-
-Live connectivity could not be validated outside the original company network. Snapshot-mode startup and routes are tested without opening JDBC connections.
+Start the application with `python run.py`. Use one server worker when the in-process scheduler is enabled so collection jobs are not duplicated. Live connectivity must be verified in the configured warehouse environment. Large-table counts and time-range queries can be expensive.
 
 ## Docker
 
@@ -94,103 +129,52 @@ docker build -t table-status-dashboard .
 docker run --rm -p 8000:8000 table-status-dashboard
 ```
 
-This Dockerfile runs snapshot mode with Gunicorn. The standalone Python command above uses Flask's local development server. A live-mode container additionally requires Java and JDBC dependencies and driver files.
+The included image runs snapshot mode with Gunicorn. A live-mode container also needs Java, JDBC driver jars, and private connection configuration.
 
-## Optional: export for GitHub Pages or static hosting
+## Static Export and Hosting
 
-The live demo above is already deployed. These steps are only needed to host your own copy.
+The public site is already deployed at **https://hjxupup.github.io/table-status-dashboard/**. It is published from the `docs/` directory on the `main` branch.
 
-```bash
-python tools/build_demo.py
-python -m http.server 8001 --directory web-demo
-```
-
-Open **http://127.0.0.1:8001**. The `web-demo` directory is self-contained. It uses relative asset paths and works under a GitHub Pages repository subpath as well as at a site's root.
-
-To create a single HTML file that can be opened by double-clicking:
-
-```bash
-python tools/build_demo.py --standalone Table_Status_Dashboard.html
-```
-
-This embeds the historical dataset, styles and browser interactions in one file. Browser privacy settings may restrict persistence of favorites for local files; the dashboard still works with in-memory favorites.
-
-For GitHub Pages, the included `docs/` folder is already built:
-
-1. Upload `docs` together with the source files; keep `README.md` at the repository root.
-2. Open **Settings → Pages** and choose **Deploy from a branch**.
-3. Select your default branch (usually `main`) and the `/docs` folder, then save.
-4. Copy the published URL into the README and the repository's **About → Website** field.
-
-To rebuild both included previews after making changes:
+To rebuild both the GitHub Pages files and the standalone preview:
 
 ```bash
 python tools/build_demo.py --output docs --standalone Table_Status_Dashboard.html
 ```
 
-GitHub Pages serves the archived-data frontend. The Flask backend and live Hive connection can be run separately using the instructions above.
+Commit the updated `docs/` files to the publishing branch to update the demo. See [GITHUB_UPLOAD.md](GITHUB_UPLOAD.md) for deployment instructions.
 
-The bundle retains the visible display metrics. Original databases, actual live-source table/key configuration, credentials, internal environment identifiers, server-specific driver paths and non-display source fields are excluded. The public API exposes only webpage fields. Local snapshot mode recreates its SQLite database from the display snapshots. Publicly displayed values, including table headings and time-column labels, can still be inspected in browser tools.
+## Data and Privacy
 
-## API reference (Flask)
+The public edition contains one historical display snapshot for each of the 39 tables. Displayed table names, time-column names, metrics, and timestamps are accessible to visitors.
 
-| Endpoint | Method | Purpose |
-| --- | --- | --- |
-| `/api/ensure_data` | GET | Initial refresh / available-data state |
-| `/api/table/<table>` | GET | Latest saved snapshot and favorites |
-| `/api/table/<table>/refresh` | POST | Analyze live or read an archived snapshot |
-| `/api/table/<table>/time_spans` | GET | Time columns, ranges and favorites |
-| `/api/table/<table>/select_time_column` | POST | Select a column; calculate a missing range in live mode |
-| `/api/table/<table>/favorite` | POST | Add a valid time column; maximum five per table |
-| `/api/table/<table>/favorite/<column>` | DELETE | Remove a favorite |
-| `/api/refresh` | POST | Trigger a background batch refresh |
-| `/api/monitoring` | GET | Flag old/missing analysis metadata and primary-key count mismatches |
-
-`MAX_SNAPSHOT_AGE_HOURS` controls the new stale-snapshot threshold; its default is 24 hours. `METADATA_TIMEZONE` defaults to `Asia/Shanghai`, matching the original analyzer's timestamp convention. This API supplies flags for consumers. It does not automatically stop external downstream jobs or guarantee that nobody uses outdated information.
+Credentials, original databases, internal connection details, actual live-source table/key configuration, server-specific paths, and non-display source fields are excluded. Private configuration stays in local `.env`, `target_tables.txt`, and `table_primary_keys.json` files, which are ignored by Git. See [PRIVACY.md](PRIVACY.md) for the publication boundary and upload guidance.
 
 ## Validation
 
 ```bash
 python -m pip install -r requirements-dev.txt
 python -m pytest tests -q
-```
-
-The tests exercise offline startup, all 39 rendered cards, preservation of real analysis timestamps during snapshot refresh, column/favorite validation and limits, merging of selectively computed live time ranges, and stale/inconsistent metadata detection.
-
-Privacy regression checks verify that exported snapshots contain only display fields and that the public API excludes source locations and primary-key definitions even if those fields exist in local storage.
-
-The browser adapter can also be checked with Node.js 20+:
-
-```bash
 node --test tests/demo-api.test.mjs
 ```
 
-These checks cover all 39 archived tables, refresh without fabricated timestamps, GitHub Pages subpath loading, self-contained file mode, favorite limits, persistence, and isolation between visitors. These are code checks; the original approved page layout, styles and interactions are preserved. Follow the included guide to publish the website in your own GitHub repository.
+The checks cover snapshot-mode startup, all 39 cards, table and column validation, favorite limits, preservation of historical timestamps and existing card metrics, time-range merging, monitoring flags, GitHub Pages subpath loading, browser storage, and exclusion of non-display metadata from public output.
 
-## Project layout
+## Project Structure
 
 ```text
 app/
-  flask_app.py        # App factory, original API paths, explicit snapshot/live modes
-  models.py          # SQLAlchemy snapshot and favorite models
-  storage.py         # SQLite persistence and retention
-  services/
-    analyzer.py      # Original Hive metadata query service
-    db.py            # Configurable JDBC connector
-  templates/
-    index.html       # Original page structure
-  static/
-    styles.css       # Original styles, with small notice/mobile fixes
-    app.js           # Original interactions, with metric-preservation fixes
-data/snapshots.json   # Latest historical snapshot for each of the 39 tables
-tools/build_demo.py   # Export original template for static hosting
-tools/demo-api.js     # Browser snapshot/favorites adapter
-PRIVACY.md            # Included/excluded data and publication boundary
-target_tables.txt.example  # Generic local configuration template
-table_primary_keys.json.example  # Generic local configuration template
-tests/                # API and monitoring checks
-docs/                 # Prebuilt GitHub Pages website
-Table_Status_Dashboard.html  # Self-contained local preview
-GITHUB_UPLOAD.md       # Upload instructions in Chinese
-run.py                # Simple local startup
+  flask_app.py           # Flask setup and metadata API routes
+  models.py             # Snapshot and favorite-column models
+  storage.py            # SQLite persistence and retention
+  services/             # JDBC connection and metadata analysis
+  templates/            # Jinja2 dashboard template
+  static/               # CSS and browser interactions
+data/snapshots.json      # Archived dashboard display data
+docs/                    # Published GitHub Pages frontend
+tools/                   # Static export and browser adapter
+tests/                   # Python and JavaScript checks
+run.py                   # Local application entry point
+Dockerfile               # Container setup
+PRIVACY.md               # Public-data scope and configuration handling
+GITHUB_UPLOAD.md         # GitHub upload and Pages instructions
 ```
