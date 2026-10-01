@@ -1,8 +1,8 @@
 # Table Status Dashboard
 
-**[Live Demo — Open the Dashboard](https://table-status-dashboard-jiaxin.hjxupup.chatgpt.site/)**
+**[Live Demo — Open the Dashboard](https://hjxupup.github.io/table-status-dashboard/)**
 
-The hosted demo is public and requires no sign-in, installation, or deployment.
+Once published, the GitHub Pages demo is public and requires no sign-in, installation, or local deployment.
 
 A reproduction of the original Python / Flask / SQLAlchemy table-metadata dashboard. It retains the original card grid, Chinese field labels, green cache buttons, blue analysis buttons, time-column dropdowns, and star favorites.
 

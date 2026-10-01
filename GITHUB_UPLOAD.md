@@ -5,10 +5,12 @@
 ## 1. 解压并上传
 
 1. 下载 ZIP，在 Windows 中右键选择“全部解压”，打开解压后的 `Table_Status_Dashboard` 文件夹。
-2. 登录 GitHub，创建仓库，名称建议为 `status-dashboard`。如需让招聘者查看源码，可将仓库设为 Public。
+2. 登录 GitHub，打开已创建的仓库 [https://github.com/hjxupup/table-status-dashboard](https://github.com/hjxupup/table-status-dashboard)。使用 GitHub Free 发布 Pages 时，仓库需设为 Public。
 3. 打开仓库上传入口：已有仓库选择 **Add file → Upload files**；空仓库选择 **uploading an existing file**。
 4. 将解压后文件夹内的文件和子文件夹拖进上传区域。上传文件内容，而不是只上传 ZIP，也不要额外套一层 `Table_Status_Dashboard` 目录。
 5. 确认 `README.md` 位于仓库根目录，网页入口是 `docs/index.html`，然后按页面提示提交。提交说明可填写 `Add table status dashboard with original historical snapshots`。
+
+本包 README 已填入计划发布地址 `https://hjxupup.github.io/table-status-dashboard/`；启用 Pages 并部署成功后，此链接才会生效。
 
 README 会显示在仓库首页。源码、历史数据和静态网页会一起保存在仓库中。
 
@@ -29,7 +31,7 @@ README 会显示在仓库首页。源码、历史数据和静态网页会一起�
 也可以编辑 `README.md`，在开头加一行：
 
 ```markdown
-[Live Demo](粘贴你的实际GitHub-Pages网址)
+[Live Demo](https://hjxupup.github.io/table-status-dashboard/)
 ```
 
 别人进入 GitHub 项目后，即可点击链接打开网页。
